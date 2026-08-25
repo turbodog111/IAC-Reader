@@ -2,7 +2,7 @@
 
 A local U.S. History Bee playoff reader with clue-level tracking, IAC 6/5/4/3 scoring, and a probabilistic practice opponent.
 
-The repository includes 149 studied answerlines and 1,670 individually tracked clues. It is an independent study tool and is not affiliated with International Academic Competitions.
+The repository includes 152 studied answerlines and 1,715 individually tracked clues. It is an independent study tool and is not affiliated with International Academic Competitions.
 
 **Live reader:** [turbodog111.github.io/IAC-Reader](https://turbodog111.github.io/IAC-Reader/)
 
@@ -24,6 +24,10 @@ Open [http://127.0.0.1:8775](http://127.0.0.1:8775). The server binds only to th
 - Adjust answer checking from exact to standard aliases or typo-tolerant leniency.
 - Flag a question for a technical problem, answerline revision, or deeper study.
 - Play an unranked race to 40 against a transparent probabilistic opponent.
+
+## Study lessons
+
+The Study view contains readable, playoff-focused lessons with chronology, buzz ladders, confusables, retrieval prompts, and direct IAC precedent. Reviewed dates are kept in browser local storage alongside practice progress. The first set covers the Mayflower Compact, Plymouth Colony, and Massachusetts Bay Colony.
 
 The AI opponent is deliberately a simulation rather than a language model. Each profile first samples a likely buzz zone and then a correct or incorrect result from that zone's configured accuracy. That structure follows the broad idea used by QBReader's open-source AI mode, adapted for IAC scoring and this corpus.
 

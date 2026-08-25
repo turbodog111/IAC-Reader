@@ -1,0 +1,202 @@
+{
+  "lessons": [
+    {
+      "id": "COL-001",
+      "title": "Mayflower Compact",
+      "era": "1620 | Founding document",
+      "deck": "A temporary agreement for civil government, written because the passengers reached Cape Cod outside the territory covered by their original patent.",
+      "facts": [
+        {"label": "Signed", "value": "November 11, 1620 (Old Style)"},
+        {"label": "Place", "value": "Aboard ship in Cape Cod Harbor"},
+        {"label": "Core phrase", "value": "Civil body politic"}
+      ],
+      "sections": [
+        {
+          "heading": "Why it was written",
+          "paragraphs": [
+            "The passengers intended to settle under a Virginia Company patent somewhere south of Long Island Sound. Storms and navigation instead brought them to Cape Cod, north of the patent's authority. Some non-Separatist passengers reportedly argued that nobody could command them once they landed outside the authorized territory. Before anyone went ashore, the adult men created an agreement that would hold the community together until a new patent arrived.",
+            "The passengers are often divided into Saints and Strangers. The Saints were members of the English Separatist congregation that had lived in Leiden in the Dutch Republic. The Strangers were other passengers recruited for the venture, including servants, craftsmen, and people seeking economic opportunity. The agreement joined both groups under one civil government without erasing their religious differences."
+          ]
+        },
+        {
+          "heading": "What the text did",
+          "paragraphs": [
+            "The signers declared themselves loyal subjects of King James and said their voyage served God, the Christian faith, king, and country. They then covenanted together into a civil body politic. That body could enact just and equal laws, ordinances, acts, constitutions, and offices for the general good, and the signers promised submission and obedience.",
+            "This was not a declaration of independence, a modern constitution, or a guarantee of universal democracy. It was a short governing covenant among forty-one of the fifty adult men aboard; women and children did not sign. Its immediate purpose was order and legal continuity. John Carver appears first on the traditional signer list and became the settlement's first governor. William Brewster is often identified as the likely drafter, but the authorship is not certain."
+          ]
+        },
+        {
+          "heading": "How the text survived",
+          "paragraphs": [
+            "The original document is lost. The earliest surviving text appears in Mourt's Relation, published in London in 1622 and principally written by Edward Winslow and William Bradford. Bradford later copied it into Of Plymouth Plantation. Samuel Purchas printed another early version in 1625, while Nathaniel Morton supplied the familiar signer list in New-England's Memorial in 1669.",
+            "The agreement was a stopgap because the group lacked valid authority at Cape Cod. A new patent obtained through John Peirce supplied a firmer legal basis in 1621. The document nevertheless became a retrospective symbol of government by consent; John Quincy Adams later praised it as an example of the social compact imagined by political philosophers."
+          ]
+        }
+      ],
+      "timeline": [
+        {"year": "1608", "event": "The Separatist congregation begins its exile in the Dutch Republic, eventually settling at Leiden."},
+        {"year": "Sept. 1620", "event": "The ship leaves England carrying 102 passengers after the Speedwell is abandoned."},
+        {"year": "Nov. 11", "event": "Cape Cod is sighted and forty-one men sign the governing agreement before landing."},
+        {"year": "1621", "event": "A patent associated with John Peirce gives the settlement a stronger legal claim."},
+        {"year": "1622", "event": "Mourt's Relation publishes the earliest surviving version of the text."},
+        {"year": "1669", "event": "Nathaniel Morton's New-England's Memorial prints the traditional list of signers."}
+      ],
+      "clueLadder": {
+        "6": ["Peirce patent", "Mourt's Relation", "Nathaniel Morton", "John Quincy Adams's social-contract praise", "original text lost"],
+        "5": ["Saints and Strangers", "outside the Virginia patent", "William Brewster as probable drafter", "John Carver first on signer list", "forty-one adult male signers"],
+        "4": ["civil body politic", "just and equal laws", "loyalty to King James", "signed at Cape Cod before landing", "named for the passengers' ship"]
+      },
+      "confusables": [
+        {"term": "Fundamental Orders", "distinction": "A 1639 framework for Connecticut government, associated with Thomas Hooker; much longer and later."},
+        {"term": "Massachusetts Body of Liberties", "distinction": "Nathaniel Ward's 1641 legal code for a different Puritan settlement."},
+        {"term": "Cambridge Agreement", "distinction": "The 1629 pledge that leaders of a chartered company would move themselves and its government to New England."},
+        {"term": "Plymouth Colony", "distinction": "The settlement governed by this document, not the document itself."}
+      ],
+      "retrieval": [
+        "Why did arriving at Cape Cod create an immediate government problem?",
+        "Who were the Saints and Strangers, and what problem did their agreement solve?",
+        "Give the two most important quoted phrases from the text.",
+        "Name the earliest surviving source, the later chronicler, and the compiler of the signer list.",
+        "Why is calling this document a modern democratic constitution misleading?"
+      ],
+      "sources": [
+        {"label": "IAC: 2019 National History Bee Finals B, direct answerline", "url": "https://www.iacompetitions.com/wp-content/uploads/2023/08/2018-2019-HS-History-Bee-Finals-B-Set.pdf"},
+        {"label": "Library of Congress: The Mayflower Compact", "url": "https://www.loc.gov/exhibitions/join-in-voluntary-associations-in-america/about-this-exhibition/a-toolkit-for-associations/the-mayflower-compact/"},
+        {"label": "National Park Service: Pilgrims and the text", "url": "https://www.nps.gov/caco/learn/historyculture/pilgrims.htm"}
+      ]
+    },
+    {
+      "id": "COL-002",
+      "title": "Plymouth Colony",
+      "era": "1620-1691 | Separatist settlement",
+      "deck": "The smaller Pilgrim settlement at Patuxet: Bradford, Winslow, Standish, Wampanoag diplomacy, the 1621 harvest gathering, and eventual absorption into a royal province.",
+      "facts": [
+        {"label": "Founded", "value": "December 1620"},
+        {"label": "First governor", "value": "John Carver"},
+        {"label": "Long-serving governor", "value": "William Bradford"}
+      ],
+      "sections": [
+        {
+          "heading": "Arrival at Patuxet",
+          "paragraphs": [
+            "The English Separatists remembered as Pilgrims had left England for Leiden before arranging a transatlantic venture financed by the Merchant Adventurers. Their ship reached Cape Cod in November 1620. After exploring the coast, the settlers chose Patuxet, a Wampanoag village emptied by an epidemic, and began building in December. This was not the first permanent English settlement; Jamestown had existed since 1607.",
+            "The first winter was catastrophic. Disease and exposure killed roughly half the settlers. John Carver, selected as the first governor, died in April 1621. William Bradford succeeded him and was elected governor about thirty times over the next three decades. Edward Winslow and Thomas Prence also repeatedly held the office, while Myles Standish served as the principal military commander."
+          ]
+        },
+        {
+          "heading": "Wampanoag relations and the harvest gathering",
+          "paragraphs": [
+            "Samoset, an Abenaki visitor who knew some English, made the first recorded greeting. Tisquantum, usually called Squanto, was Patuxet. He had learned English after being kidnapped by Thomas Hunt, sold in Spain, and living in England before returning home. He interpreted and advised the settlers, but his diplomacy pursued his own position among Native communities rather than simple friendship.",
+            "In March 1621, the settlers made a mutual-defense agreement with the Wampanoag sachem Ousamequin, commonly called Massasoit. Edward Winslow became a central diplomat. In autumn 1621, Massasoit and about ninety Wampanoag men joined a three-day harvest gathering. Winslow's account in Mourt's Relation is the only contemporary eyewitness description; the event acquired the label First Thanksgiving much later."
+          ]
+        },
+        {
+          "heading": "Government, conflict, and the end",
+          "paragraphs": [
+            "The Mayflower Compact supplied the first civil agreement, while the governor and General Court developed a working government. A 1636 codification gathered laws for the settlement. The arrival of the Fortune in 1621 and Little James in 1623 increased the population. In 1623, leaders shifted crop production from a common arrangement to family plots, improving incentives without creating a simple modern free-market system.",
+            "The settlement joined the New England Confederation in 1643 with Massachusetts Bay, Connecticut, and New Haven. Its forces participated in the Pequot War. Relations with the Wampanoag collapsed after Massasoit's death, the suspicious death of his son Wamsutta, and the murder of interpreter John Sassamon. King Philip's War began in this jurisdiction in 1675 under Metacom, Massasoit's son. A 1691 royal charter combined this settlement with Massachusetts Bay, Maine, and other territory in the Province of Massachusetts Bay, effective in 1692."
+          ]
+        }
+      ],
+      "timeline": [
+        {"year": "1620", "event": "The Pilgrims land at the former Patuxet site and establish the settlement."},
+        {"year": "1621", "event": "Carver dies; Bradford becomes governor; Massasoit signs an alliance; the harvest gathering occurs."},
+        {"year": "1623", "event": "The Little James arrives and crop production shifts toward household plots."},
+        {"year": "1636", "event": "The General Court codifies the settlement's laws."},
+        {"year": "1643", "event": "The settlement joins the New England Confederation."},
+        {"year": "1675-76", "event": "King Philip's War devastates the region after John Sassamon's murder."},
+        {"year": "1691-92", "event": "A new royal charter absorbs the settlement into the Province of Massachusetts Bay."}
+      ],
+      "clueLadder": {
+        "6": ["Fortune and Little James", "John Peirce patent", "Thomas Prence and Edward Winslow as governors", "Mourt's Relation", "Standish actions at Wessagusset"],
+        "5": ["Patuxet epidemic site", "Samoset and Tisquantum", "Ousamequin or Massasoit alliance", "1636 legal code", "John Sassamon and King Philip's War"],
+        "4": ["John Carver and William Bradford", "half die in first winter", "1621 harvest feast", "Pilgrims and their ship", "merged into a royal province in 1691"]
+      },
+      "confusables": [
+        {"term": "Massachusetts Bay Colony", "distinction": "A larger, later non-Separatist Puritan migration centered on Boston and John Winthrop."},
+        {"term": "Jamestown", "distinction": "The 1607 Virginia settlement founded by the Virginia Company, associated with John Smith and tobacco."},
+        {"term": "Mayflower Compact", "distinction": "The 1620 governing agreement; this answerline is the polity and settlement."},
+        {"term": "Plymouth, England", "distinction": "The English port from which the final voyage departed, not the New England settlement."}
+      ],
+      "retrieval": [
+        "Why was Patuxet available for English settlement in 1620?",
+        "Separate the roles of Samoset, Tisquantum, Massasoit, Winslow, Bradford, and Standish.",
+        "What is Mourt's Relation, and why is it central to two different answerlines?",
+        "What changed in crop production in 1623?",
+        "How did King Philip's War begin in this jurisdiction, and how did the polity end?"
+      ],
+      "sources": [
+        {"label": "IAC: 2021 U.S. History Bee Semifinals A, direct answerline", "url": "https://www.iacompetitions.com/wp-content/uploads/2023/09/2020-2021-HS-US-History-Bee-Semifinals-A-Set.pdf"},
+        {"label": "IAC: 2015 National History Bee Finals B, direct answerline", "url": "https://www.iacompetitions.com/wp-content/uploads/2023/08/2014-2015-HS-History-Bee-Finals-B-Set.pdf"},
+        {"label": "Library of Congress: Mourt's Relation catalog record", "url": "https://www.loc.gov/item/03008746/"}
+      ]
+    },
+    {
+      "id": "COL-003",
+      "title": "Massachusetts Bay Colony",
+      "era": "1628-1691 | Puritan commonwealth",
+      "deck": "The chartered Puritan polity centered on Boston: company government, Winthrop's migration, representative institutions, dissent, law, and royal consolidation.",
+      "facts": [
+        {"label": "Charter", "value": "1629 royal charter"},
+        {"label": "Migration", "value": "Winthrop Fleet, 1630"},
+        {"label": "Center", "value": "Boston"}
+      ],
+      "sections": [
+        {
+          "heading": "Company becomes government",
+          "paragraphs": [
+            "The failed Dorchester Company settlement at Cape Ann preceded a new effort. John Endecott led settlers to Naumkeag, renamed Salem, in 1628. The New England Company received a land grant, and Charles I issued a royal charter to the Massachusetts Bay Company in 1629. Matthew Cradock served as the company's first governor in England but never lived in New England.",
+            "The unusual Cambridge Agreement of 1629 promised that investors would move to New England if the charter and company government went with them. John Winthrop was elected governor, and the Winthrop Fleet carried roughly seven hundred migrants on eleven ships in 1630. Winthrop sailed on the Arbella and delivered A Model of Christian Charity, warning that their community would be watched as a city upon a hill. Boston replaced water-poor Charlestown as the political center."
+          ]
+        },
+        {
+          "heading": "A Puritan commonwealth",
+          "paragraphs": [
+            "These settlers were Puritans who generally hoped to reform the Church of England, not the Separatists associated with Plymouth. In 1631, full political freemanship was restricted to male members of approved churches. The General Court originally resembled a company meeting, but towns began sending elected deputies in 1634. The government combined corporate charter, representative practices, and a religiously restricted electorate.",
+            "Harvard College was founded in 1636 and named after John Harvard's 1638 bequest. The 1647 Old Deluder Satan Act required larger towns to support schools so children could read Scripture. Nathaniel Ward drafted the Massachusetts Body of Liberties, adopted in 1641 as one hundred statements of rights and rules. The 1648 Laws and Liberties became New England's first printed statutory code."
+          ]
+        },
+        {
+          "heading": "Dissent, expansion, and royal control",
+          "paragraphs": [
+            "Religious uniformity produced famous expulsions. Roger Williams was banished in 1635 and founded Providence. Anne Hutchinson and John Wheelwright challenged the ministerial establishment during the Antinomian or Free Grace Controversy; Hutchinson was banished after her 1637 civil trial and excommunicated in 1638. Thomas Hooker led settlers to Connecticut, while the Quaker Mary Dyer was executed in Boston in 1660 after repeatedly defying banishment orders.",
+            "The polity fought in the Pequot War and joined the New England Confederation in 1643. Charles II's government annulled its charter in 1684. Joseph Dudley briefly headed an interim government before Edmund Andros governed the Dominion of New England from Boston. Colonists overthrew Andros in the 1689 Boston Revolt. The 1691 charter created the Province of Massachusetts Bay, combining this polity with Plymouth and Maine under a crown-appointed governor and broader property-based voting. The 1692 Salem witch trials therefore occurred in the new royal province, not technically in the old charter colony."
+          ]
+        }
+      ],
+      "timeline": [
+        {"year": "1628", "event": "John Endecott establishes the Salem settlement."},
+        {"year": "1629", "event": "Charles I grants the company charter; the Cambridge Agreement plans its transfer."},
+        {"year": "1630", "event": "The Winthrop Fleet arrives and Boston becomes the center of government."},
+        {"year": "1634", "event": "Town deputies transform the General Court into a more representative legislature."},
+        {"year": "1635-38", "event": "Williams is banished and the Antinomian Controversy leads to Hutchinson's exile."},
+        {"year": "1641", "event": "Nathaniel Ward's Body of Liberties is adopted."},
+        {"year": "1684-89", "event": "The charter is annulled, the Dominion rules, and the Boston Revolt removes Andros."},
+        {"year": "1691", "event": "A new charter creates a royal province and merges in Plymouth and Maine."}
+      ],
+      "clueLadder": {
+        "6": ["Dorchester Company and Cape Ann", "Matthew Cradock", "Cambridge Agreement", "Endecott pear tree and flag defacement", "Nathaniel Ward's Body of Liberties"],
+        "5": ["John Wheelwright and Henry Vane", "Old Deluder Satan Act", "Mary Dyer", "New England Confederation", "charter annulment and Edmund Andros"],
+        "4": ["Arbella and Winthrop Fleet", "Great Migration", "A Model of Christian Charity", "city upon a hill", "Puritan Boston settlement"]
+      },
+      "confusables": [
+        {"term": "Plymouth Colony", "distinction": "Founded in 1620 by Separatists; smaller, associated with Bradford, Standish, and the 1621 harvest gathering."},
+        {"term": "Province of Massachusetts Bay", "distinction": "The royal government created by the 1691 charter; it includes Plymouth and is the government during the 1692 witch trials."},
+        {"term": "Dominion of New England", "distinction": "The 1686-89 royal consolidation governed by Edmund Andros, created after the charter was annulled."},
+        {"term": "Connecticut Colony", "distinction": "Associated with Thomas Hooker and the Fundamental Orders rather than Winthrop's chartered company."}
+      ],
+      "retrieval": [
+        "How did the Cambridge Agreement turn a trading corporation into an on-site government?",
+        "Distinguish the roles of Cradock, Endecott, Winthrop, Dudley, and Andros.",
+        "What changed in the General Court in 1634?",
+        "Connect Williams, Hutchinson, Wheelwright, Hooker, and Dyer to distinct controversies.",
+        "Why are the 1692 witch trials technically not events of this answerline?"
+      ],
+      "sources": [
+        {"label": "IAC: 2017 National History Bee Finals A, direct answerline", "url": "https://www.iacompetitions.com/wp-content/uploads/2023/08/2016-2017-HS-History-Bee-Finals-A-Set.pdf"},
+        {"label": "IAC: 2019 National History Bee Round 5, direct answerline", "url": "https://www.iacompetitions.com/wp-content/uploads/2023/09/2019-HS-Nationals-US-History-Bee-Round-5.pdf"},
+        {"label": "Massachusetts State Library: Body of Liberties", "url": "https://www.mass.gov/info-details/massachusetts-body-of-liberties"}
+      ]
+    }
+  ]
+}

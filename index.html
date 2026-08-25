@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>IAC Reader</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=1.1.0">
+  <link rel="stylesheet" href="styles.css?v=1.2.0">
 </head>
 <body>
   <header class="topbar">
@@ -17,6 +17,7 @@
     </a>
     <nav class="primary-nav" aria-label="Primary navigation">
       <button class="nav-button active" type="button" data-view="practice">Practice</button>
+      <button class="nav-button" type="button" data-view="study">Study</button>
       <button class="nav-button" type="button" data-view="notRanked">Not Ranked</button>
       <button class="nav-button" type="button" data-view="ledger">Clue ledger</button>
       <button class="nav-button" type="button" data-view="sessions">Sessions</button>
@@ -143,6 +144,23 @@
       </div>
 
       <div id="sessionSummary" hidden></div>
+    </section>
+
+    <section id="studyView" class="view" hidden>
+      <div class="page-heading study-heading">
+        <div>
+          <p class="kicker">Colonial foundations</p>
+          <h1>Study</h1>
+        </div>
+        <div id="studyMetrics" class="heading-metrics"></div>
+      </div>
+      <div class="study-layout">
+        <aside class="study-index" aria-label="Study topics">
+          <p class="study-index-label">Current set</p>
+          <div id="studyTopicList" class="study-topic-list"></div>
+        </aside>
+        <article id="studyArticle" class="study-article"></article>
+      </div>
     </section>
 
     <section id="notRankedView" class="view" hidden>
@@ -287,6 +305,6 @@
     </form>
   </dialog>
 
-  <script src="app.js?v=1.1.0" defer></script>
+  <script src="app.js?v=1.2.0" defer></script>
 </body>
 </html>

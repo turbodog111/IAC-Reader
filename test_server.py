@@ -62,6 +62,33 @@ class BankTests(unittest.TestCase):
         self.assertEqual(topic["answerType"], "pair of political factions")
         self.assertEqual(topic["questionPrompt"], "name these two political factions")
 
+    def test_colonial_answerlines_have_expected_alias_behavior(self):
+        topics = {topic["id"]: topic for topic in self.topics}
+        self.assertIn("plymouth", topics["COL-002"]["aliases"])
+        self.assertIn("massachusetts", topics["COL-003"]["promptAliases"])
+        self.assertEqual(topics["COL-003"]["questionPrompt"], "name this colony")
+
+
+class StudyLessonTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        path = Path(__file__).parent / "study/lessons.json"
+        cls.lessons = json.loads(path.read_text(encoding="utf-8"))["lessons"]
+
+    def test_each_lesson_maps_to_a_packaged_answerline(self):
+        topics, _ = server.load_bank()
+        topic_ids = {topic["id"] for topic in topics}
+        self.assertEqual({lesson["id"] for lesson in self.lessons}, {"COL-001", "COL-002", "COL-003"})
+        self.assertTrue(all(lesson["id"] in topic_ids for lesson in self.lessons))
+
+    def test_lessons_include_full_retrieval_structure(self):
+        for lesson in self.lessons:
+            self.assertGreaterEqual(len(lesson["sections"]), 3)
+            self.assertGreaterEqual(len(lesson["timeline"]), 6)
+            self.assertEqual(set(lesson["clueLadder"]), {"4", "5", "6"})
+            self.assertTrue(all(len(lesson["clueLadder"][tier]) >= 5 for tier in ("4", "5", "6")))
+            self.assertGreaterEqual(len(lesson["retrieval"]), 5)
+
 
 class AttemptTests(unittest.TestCase):
     @classmethod

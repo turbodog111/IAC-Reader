@@ -18,6 +18,7 @@ const state = {
   ledgerLimit: 100,
   lastClueSets: new Map(),
   staticMode: false,
+  studyId: localStorage.getItem("iac-reader-study-topic") || null,
 };
 
 function escapeHtml(value) {
@@ -39,6 +40,7 @@ function normalizeAnswer(value) {
 const LENIENCY_LABELS = ["Exact", "Standard", "Lenient"];
 const ATTEMPT_CACHE_KEY = "iac-reader-attempt-cache-v1";
 const FLAG_CACHE_KEY = "iac-reader-flag-cache-v1";
+const STUDY_REVIEW_KEY = "iac-reader-study-reviews-v1";
 
 function levenshtein(left, right) {
   const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
@@ -66,6 +68,7 @@ function checkAnswer(topic, typed) {
   const value = normalizeAnswer(typed);
   const canonical = normalizeAnswer(topic.answerline);
   if (value === canonical) return { verdict: "correct" };
+  if ((topic.promptAliases || []).includes(value)) return { verdict: "prompt" };
   if (state.leniency === 0) return { verdict: "unknown" };
   if (topic.aliases.includes(value)) {
     const owners = aliasOwners(value);
@@ -249,6 +252,7 @@ function setView(view) {
   if (view !== "notRanked" && state.duel?.current && !state.duel.current.answered) pauseDuel();
   if (view === "ledger") renderLedger(true);
   if (view === "sessions") renderSessions();
+  if (view === "study") renderStudy();
   history.replaceState(null, "", `#${view}`);
   window.scrollTo(0, 0);
 }
@@ -274,6 +278,81 @@ function renderGlobalMetrics() {
     metric(summary.points, "net points"),
     metric(formatPercent(summary.accuracy), "accuracy"),
   ].join("");
+}
+
+function studyReviews() {
+  try {
+    const reviews = JSON.parse(localStorage.getItem(STUDY_REVIEW_KEY) || "{}");
+    return reviews && typeof reviews === "object" && !Array.isArray(reviews) ? reviews : {};
+  } catch {
+    return {};
+  }
+}
+
+function renderStudy() {
+  const lessons = state.data.lessons || [];
+  if (!lessons.length) {
+    $("#studyArticle").innerHTML = '<p class="empty-cell">No lessons are available.</p>';
+    return;
+  }
+  if (!lessons.some((lesson) => lesson.id === state.studyId)) state.studyId = lessons[0].id;
+  localStorage.setItem("iac-reader-study-topic", state.studyId);
+  const reviewed = studyReviews();
+  const reviewedCount = lessons.filter((lesson) => reviewed[lesson.id]).length;
+  $("#studyMetrics").innerHTML = [
+    metric(lessons.length, "lessons"),
+    metric(`${reviewedCount}/${lessons.length}`, "reviewed"),
+  ].join("");
+  $("#studyTopicList").innerHTML = lessons.map((lesson, index) => `
+    <button class="study-topic-button${lesson.id === state.studyId ? " active" : ""}" type="button" data-study-id="${escapeHtml(lesson.id)}">
+      <span>${String(index + 1).padStart(2, "0")}</span>
+      <strong>${escapeHtml(lesson.title)}</strong>
+      ${reviewed[lesson.id] ? '<small aria-label="Reviewed">Reviewed</small>' : ""}
+    </button>`).join("");
+  renderStudyArticle(lessons.find((lesson) => lesson.id === state.studyId), reviewed);
+}
+
+function renderStudyArticle(lesson, reviewed) {
+  const reviewDate = reviewed[lesson.id] ? formatDate(reviewed[lesson.id]) : null;
+  const timeline = lesson.timeline.map((entry) => `
+    <div class="timeline-row"><time>${escapeHtml(entry.year)}</time><p>${escapeHtml(entry.event)}</p></div>`).join("");
+  const sections = lesson.sections.map((section) => `
+    <section class="lesson-section">
+      <h2>${escapeHtml(section.heading)}</h2>
+      ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+    </section>`).join("");
+  const clueBands = [6, 5, 4].map((tier) => `
+    <section class="lesson-clue-band tier-${tier}">
+      <div><span>${tier}</span><strong>${tier === 6 ? "Early" : tier === 5 ? "Middle" : "Conversion"} clues</strong></div>
+      <ul>${lesson.clueLadder[String(tier)].map((clue) => `<li>${escapeHtml(clue)}</li>`).join("")}</ul>
+    </section>`).join("");
+  const confusables = lesson.confusables.map((item) => `
+    <tr><th>${escapeHtml(item.term)}</th><td>${escapeHtml(item.distinction)}</td></tr>`).join("");
+  const retrieval = lesson.retrieval.map((prompt, index) => `
+    <li><span>${index + 1}</span><p>${escapeHtml(prompt)}</p></li>`).join("");
+  const sources = lesson.sources.map((source) => `
+    <li><a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a></li>`).join("");
+  $("#studyArticle").innerHTML = `
+    <header class="lesson-header">
+      <div><p class="lesson-era">${escapeHtml(lesson.era)}</p><h1>${escapeHtml(lesson.title)}</h1><p class="lesson-deck">${escapeHtml(lesson.deck)}</p></div>
+      <button id="toggleStudyReview" class="${reviewDate ? "secondary-button reviewed-button" : "primary-button"}" type="button">${reviewDate ? `Reviewed ${escapeHtml(reviewDate)}` : "Mark reviewed"}</button>
+    </header>
+    <div class="lesson-facts">${lesson.facts.map((fact) => `<div><span>${escapeHtml(fact.label)}</span><strong>${escapeHtml(fact.value)}</strong></div>`).join("")}</div>
+    <div class="lesson-body">${sections}</div>
+    <section class="lesson-section"><h2>Chronology</h2><div class="lesson-timeline">${timeline}</div></section>
+    <section class="lesson-section"><h2>Buzz ladder</h2><div class="lesson-clue-ladder">${clueBands}</div></section>
+    <section class="lesson-section"><h2>Do not confuse</h2><div class="confusable-wrap"><table class="confusable-table"><tbody>${confusables}</tbody></table></div></section>
+    <section class="lesson-section"><h2>Retrieval check</h2><ol class="retrieval-list">${retrieval}</ol></section>
+    <section class="lesson-sources"><h2>Question record and sources</h2><ul>${sources}</ul></section>`;
+  $("#toggleStudyReview").addEventListener("click", toggleStudyReview);
+}
+
+function toggleStudyReview() {
+  const reviewed = studyReviews();
+  if (reviewed[state.studyId]) delete reviewed[state.studyId];
+  else reviewed[state.studyId] = new Date().toISOString();
+  localStorage.setItem(STUDY_REVIEW_KEY, JSON.stringify(reviewed));
+  renderStudy();
 }
 
 function renderDomains() {
@@ -367,6 +446,7 @@ function targetNoun(answerType) {
   if (/person|artist|architect|designer|photographer|anthropologist|figure/.test(answerType)) return "person";
   if (/election/.test(answerType)) return "election";
   if (/speech|document/.test(answerType)) return "work";
+  if (/colony/.test(answerType)) return "settlement";
   if (/case/.test(answerType)) return "case";
   if (/treaty/.test(answerType)) return "agreement";
   if (/organization|institution|faction|movement/.test(answerType)) return "group";
@@ -1392,6 +1472,9 @@ async function importProgress(event) {
     button.textContent = "Importing";
     const payload = JSON.parse(await file.text());
     if (!Array.isArray(payload.attempts) || !Array.isArray(payload.flags)) throw new Error("Invalid progress backup");
+    if (payload.studyReviews && typeof payload.studyReviews === "object") {
+      localStorage.setItem(STUDY_REVIEW_KEY, JSON.stringify(payload.studyReviews));
+    }
     if (state.staticMode) {
       cacheRecords(ATTEMPT_CACHE_KEY, payload.attempts, "client_attempt_id");
       cacheRecords(FLAG_CACHE_KEY, payload.flags, "client_flag_id");
@@ -1422,6 +1505,7 @@ function downloadStaticProgress(event) {
     exported_at: new Date().toISOString(),
     attempts: readCache(ATTEMPT_CACHE_KEY),
     flags: readCache(FLAG_CACHE_KEY),
+    studyReviews: studyReviews(),
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -1440,9 +1524,14 @@ async function loadData() {
       await flushLocalCache(ATTEMPT_CACHE_KEY, "/api/attempt");
       await flushLocalCache(FLAG_CACHE_KEY, "/api/flag");
     }
-    const response = await fetch(state.staticMode ? "static/bootstrap.json" : "/api/bootstrap", { cache: "no-store" });
+    const [response, lessonResponse] = await Promise.all([
+      fetch(state.staticMode ? "static/bootstrap.json" : "/api/bootstrap", { cache: "no-store" }),
+      fetch("study/lessons.json", { cache: "no-store" }),
+    ]);
     if (!response.ok) throw new Error("Could not load the studied clue bank");
+    if (!lessonResponse.ok) throw new Error("Could not load the study lessons");
     state.data = await response.json();
+    state.data.lessons = (await lessonResponse.json()).lessons;
     if (state.staticMode) refreshLocalProgress();
     $("#loadingView").hidden = true;
     renderDomains();
@@ -1454,7 +1543,7 @@ async function loadData() {
     $("#speedValue").textContent = `${state.speed} WPM`;
     $("#leniencyControl").value = state.leniency;
     $("#leniencyValue").textContent = LENIENCY_LABELS[state.leniency];
-    const initial = ["practice", "notRanked", "ledger", "sessions"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "practice";
+    const initial = ["practice", "study", "notRanked", "ledger", "sessions"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "practice";
     setView(initial);
   } catch (error) {
     $("#loadingView").innerHTML = `<p><strong>Reader unavailable.</strong><br>${escapeHtml(error.message)}</p>`;
@@ -1463,6 +1552,13 @@ async function loadData() {
 
 function installEvents() {
   $$(".nav-button").forEach((button) => button.addEventListener("click", () => setView(button.dataset.view)));
+  $("#studyTopicList").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-study-id]");
+    if (!button) return;
+    state.studyId = button.dataset.studyId;
+    renderStudy();
+    window.scrollTo(0, 0);
+  });
   $("#rotationControl").addEventListener("click", (event) => {
     const button = event.target.closest("button[data-rotation]");
     if (!button) return;

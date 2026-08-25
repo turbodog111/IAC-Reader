@@ -30,6 +30,7 @@ FLAG_CATEGORIES = {"technical", "revision", "study"}
 DOMAIN_NAMES = {
     "ANTH": "Anthropology",
     "ARCH": "Architecture and design",
+    "COL": "Colonial America",
     "DIP": "Diplomacy and treaties",
     "ELEC": "Elections",
     "EVT": "Events and incidents",
@@ -58,6 +59,9 @@ SPEECH_IDS = {
 }
 
 SPECIAL_ANSWER_TYPES = {
+    "COL-001": "document",
+    "COL-002": "colony",
+    "COL-003": "colony",
     "FAC-001": "pair of political factions",
     "GOV-005": "person",
     "GOV-010": "set of resolutions",
@@ -67,6 +71,10 @@ SPECIAL_ANSWER_TYPES = {
     "MISC-043": "pamphlet",
     "MISC-044": "series of essays",
     "MISC-045": "city or settlement",
+}
+
+PROMPT_ALIASES = {
+    "COL-003": ["massachusetts"],
 }
 
 
@@ -176,6 +184,7 @@ def answer_aliases(answerline: str, answer_type: str) -> list[str]:
         for suffix in (
             " affair", " strike", " speech", " address", " oration", " treaty",
             " case", " rebellion", " revolt", " riot", " war", " massacre", " fire",
+            " colony",
         ):
             if alias.endswith(suffix) and len(alias) > len(suffix) + 2:
                 aliases.add(alias[:-len(suffix)])
@@ -206,6 +215,7 @@ def load_bank() -> tuple[list[dict], list[dict]]:
             "answerType": answer_type,
             "questionPrompt": terminal_prompt(answer_type),
             "aliases": answer_aliases(answerline, answer_type),
+            "promptAliases": PROMPT_ALIASES.get(anchor, []),
             "domain": DOMAIN_NAMES.get(prefix, prefix),
             "prefix": prefix,
             "clueCount": len(records),
