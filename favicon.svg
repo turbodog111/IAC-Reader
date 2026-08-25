@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="IAC Reader">
+  <rect width="96" height="96" rx="10" fill="#20251f"/>
+  <path d="M8 8h27v80H8z" fill="#236245"/>
+  <path d="M35 8h26v80H35z" fill="#a85a0a"/>
+  <path d="M61 8h27v80H61z" fill="#315fa8"/>
+  <g fill="#fff" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="middle">
+    <text x="21.5" y="58">6</text>
+    <text x="48" y="58">5</text>
+    <text x="74.5" y="58">4</text>
+  </g>
+</svg>

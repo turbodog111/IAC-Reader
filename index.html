@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#f5f6f2">
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>IAC Reader</title>
-  <link rel="stylesheet" href="styles.css?v=1.0.1">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=1.1.0">
 </head>
 <body>
   <header class="topbar">
@@ -22,7 +23,7 @@
     </nav>
     <div class="progress-actions">
       <button id="importProgress" class="header-action" type="button" title="Restore a progress backup">Import</button>
-      <a class="icon-text-button" href="/api/progress" title="Back up attempts and flags">Backup</a>
+      <a id="backupProgress" class="icon-text-button" href="/api/progress" title="Back up attempts and flags">Backup</a>
       <input id="progressFile" type="file" accept="application/json,.json" hidden>
     </div>
   </header>
@@ -286,6 +287,6 @@
     </form>
   </dialog>
 
-  <script src="app.js?v=1.0.1" defer></script>
+  <script src="app.js?v=1.1.0" defer></script>
 </body>
 </html>

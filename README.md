@@ -4,6 +4,8 @@ A local U.S. History Bee playoff reader with clue-level tracking, IAC 6/5/4/3 sc
 
 The repository includes 149 studied answerlines and 1,670 individually tracked clues. It is an independent study tool and is not affiliated with International Academic Competitions.
 
+**Live reader:** [turbodog111.github.io/IAC-Reader](https://turbodog111.github.io/IAC-Reader/)
+
 ## Run locally
 
 Python 3.10 or newer is the only runtime requirement.
@@ -48,6 +50,8 @@ Personal progress is intentionally local:
 
 Both JSONL files are excluded by `.gitignore`. Before publishing a fork, verify with `git status --ignored` that personal data remains ignored.
 
+On GitHub Pages, the same records are stored only in that browser's local storage. Localhost and Pages are separate browser origins, so use **Backup** on one and **Import** on the other when moving progress between them.
+
 ## Question construction
 
 Each tossup samples clues from the packaged `corpus/master_clues.jsonl`, records every selected clue ID, and stores exactly how much of each clue was exposed. Questions end with a grammatical `For the points` prompt derived from the answer type. The rendered 6-point material is bold and underlined, the 5-point material is underlined, and both `(+)` and `(*)` remain visible.
@@ -56,6 +60,7 @@ Run the corpus audit after changing clues:
 
 ```bash
 python3 audit_corpus.py
+python3 build_static.py
 ```
 
 It checks IDs, complete sentences, clue length, terminal prompts, answer leakage, and minimum 6/5/4 coverage.

@@ -17,6 +17,7 @@ const state = {
   flagContext: null,
   ledgerLimit: 100,
   lastClueSets: new Map(),
+  staticMode: false,
 };
 
 function escapeHtml(value) {
@@ -77,10 +78,137 @@ function checkAnswer(topic, typed) {
   return owners.length > 1 ? { verdict: "prompt" } : { verdict: "correct" };
 }
 
+function readCache(key) {
+  try {
+    const records = JSON.parse(localStorage.getItem(key) || "[]");
+    return Array.isArray(records) ? records : [];
+  } catch {
+    return [];
+  }
+}
+
 function cacheRecord(key, record, idField) {
-  const records = JSON.parse(localStorage.getItem(key) || "[]");
-  if (!records.some((item) => item[idField] === record[idField])) records.push(record);
+  const records = readCache(key);
+  const index = records.findIndex((item) => item[idField] === record[idField]);
+  if (index >= 0) records[index] = record;
+  else records.push(record);
   localStorage.setItem(key, JSON.stringify(records.slice(-3000)));
+}
+
+function cacheRecords(key, incoming, idField) {
+  incoming.forEach((record) => cacheRecord(key, record, idField));
+}
+
+function buildLocalStats(topics, clues, attempts) {
+  const topicLookup = new Map(topics.map((topic) => [topic.id, topic]));
+  const byClue = Object.fromEntries(clues.map((clue) => [clue.id, {
+    clueId: clue.id, answerId: clue.answerId, tier: clue.tier,
+    exposures: 0, completed: 0, correctAfterSeeing: 0, incorrectAfterSeeing: 0,
+    buzzes: 0, correctBuzzes: 0, incorrectBuzzes: 0, lastShown: null,
+    lastScore: null, history: [], buzzAccuracy: null, resultAccuracy: null,
+  }]));
+  const validAttempts = attempts.filter((attempt) => topicLookup.has(attempt.answer_id));
+  validAttempts.forEach((attempt) => {
+    (attempt.clues || []).forEach((exposure) => {
+      const row = byClue[exposure.clue_id];
+      const shown = Number(exposure.shown_chars || 0);
+      if (!row || shown <= 0) return;
+      row.exposures += 1;
+      row.completed += Number(Boolean(exposure.completed));
+      row.correctAfterSeeing += Number(Boolean(attempt.correct));
+      row.incorrectAfterSeeing += Number(!attempt.correct);
+      if (exposure.active_at_buzz) {
+        row.buzzes += 1;
+        row.correctBuzzes += Number(Boolean(attempt.correct));
+        row.incorrectBuzzes += Number(!attempt.correct);
+      }
+      row.lastShown = attempt.timestamp;
+      row.lastScore = attempt.score;
+      row.history.push({
+        timestamp: attempt.timestamp, score: attempt.score, correct: Boolean(attempt.correct),
+        zone: attempt.zone, completed: Boolean(exposure.completed), shownChars: shown,
+        activeAtBuzz: Boolean(exposure.active_at_buzz),
+      });
+    });
+  });
+  Object.values(byClue).forEach((row) => {
+    row.history = row.history.slice(-8);
+    row.buzzAccuracy = row.buzzes ? row.correctBuzzes / row.buzzes : null;
+    row.resultAccuracy = row.exposures ? row.correctAfterSeeing / row.exposures : null;
+  });
+  const byTopic = {};
+  topics.forEach((topic) => {
+    const rows = clues.filter((clue) => clue.answerId === topic.id).map((clue) => byClue[clue.id]);
+    const covered = rows.filter((row) => row.exposures).length;
+    const shownDates = rows.map((row) => row.lastShown).filter(Boolean).sort();
+    byTopic[topic.id] = {
+      answerId: topic.id,
+      exposures: rows.reduce((sum, row) => sum + row.exposures, 0),
+      cluesCovered: covered,
+      clueCount: rows.length,
+      coverage: rows.length ? covered / rows.length : 0,
+      buzzes: rows.reduce((sum, row) => sum + row.buzzes, 0),
+      correctBuzzes: rows.reduce((sum, row) => sum + row.correctBuzzes, 0),
+      lastShown: shownDates.at(-1) || null,
+    };
+  });
+  const correct = validAttempts.filter((attempt) => attempt.correct).length;
+  const covered = Object.values(byClue).filter((row) => row.exposures).length;
+  return {
+    summary: {
+      attempts: validAttempts.length,
+      correct,
+      accuracy: validAttempts.length ? correct / validAttempts.length : null,
+      points: validAttempts.reduce((sum, attempt) => sum + Number(attempt.score || 0), 0),
+      topics: topics.length,
+      clues: clues.length,
+      cluesCovered: covered,
+      coverage: clues.length ? covered / clues.length : 0,
+    },
+    byClue,
+    byTopic,
+  };
+}
+
+function normalizeLocalAttempt(payload) {
+  const topics = topicMap();
+  const clues = clueMap();
+  const topic = topics.get(payload.answer_id);
+  return {
+    ...payload,
+    id: payload.id || crypto.randomUUID(),
+    client_attempt_id: payload.client_attempt_id || payload.question_id || crypto.randomUUID(),
+    timestamp: payload.timestamp || new Date().toISOString(),
+    answerline: payload.answerline || topic?.answerline || payload.answer_id,
+    mode: payload.mode || "practice",
+    clues: (payload.clues || []).map((exposure) => {
+      const clue = clues.get(exposure.clue_id);
+      const total = Number(exposure.total_chars || clue?.text.length || 0);
+      const shown = Math.max(0, Math.min(total, Number(exposure.shown_chars || 0)));
+      return { ...exposure, total_chars: total, shown_chars: shown, completed: shown >= total };
+    }),
+  };
+}
+
+function normalizeLocalFlag(payload) {
+  const topic = topicMap().get(payload.answer_id);
+  return {
+    ...payload,
+    id: payload.id || crypto.randomUUID(),
+    client_flag_id: payload.client_flag_id || crypto.randomUUID(),
+    timestamp: payload.timestamp || new Date().toISOString(),
+    answerline: payload.answerline || topic?.answerline || payload.answer_id,
+  };
+}
+
+function refreshLocalProgress() {
+  const attempts = readCache(ATTEMPT_CACHE_KEY).map(normalizeLocalAttempt);
+  const flags = readCache(FLAG_CACHE_KEY).map(normalizeLocalFlag);
+  localStorage.setItem(ATTEMPT_CACHE_KEY, JSON.stringify(attempts.slice(-3000)));
+  localStorage.setItem(FLAG_CACHE_KEY, JSON.stringify(flags.slice(-3000)));
+  state.data.stats = buildLocalStats(state.data.topics, state.data.clues, attempts);
+  state.data.recentAttempts = attempts.slice(-100).reverse();
+  state.data.flags = flags;
 }
 
 function shuffle(values) {
@@ -585,11 +713,19 @@ function buildExposures(current = state.current) {
 
 async function persistAttempt(payload) {
   cacheRecord(ATTEMPT_CACHE_KEY, payload, "client_attempt_id");
+  if (state.staticMode) {
+    const record = normalizeLocalAttempt(payload);
+    cacheRecord(ATTEMPT_CACHE_KEY, record, "client_attempt_id");
+    refreshLocalProgress();
+    renderGlobalMetrics();
+    return { ok: true, attempt: record, stats: state.data.stats, recentAttempts: state.data.recentAttempts };
+  }
   const response = await fetch("/api/attempt", {
     method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
   });
   if (!response.ok) throw new Error((await response.json()).error || "Save failed");
   const saved = await response.json();
+  cacheRecord(ATTEMPT_CACHE_KEY, saved.attempt, "client_attempt_id");
   state.data.stats = saved.stats;
   state.data.recentAttempts = saved.recentAttempts;
   renderGlobalMetrics();
@@ -1178,6 +1314,14 @@ async function saveFlag(event) {
     clue_ids: current.question.ranges.map((range) => range.clue.id),
   };
   cacheRecord(FLAG_CACHE_KEY, payload, "client_flag_id");
+  if (state.staticMode) {
+    const record = normalizeLocalFlag(payload);
+    cacheRecord(FLAG_CACHE_KEY, record, "client_flag_id");
+    refreshLocalProgress();
+    $("#flagStatus").textContent = "Saved on this device.";
+    setTimeout(cancelFlag, 280);
+    return;
+  }
   try {
     const response = await fetch("/api/flag", {
       method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
@@ -1209,6 +1353,7 @@ function renderSessions() {
 }
 
 async function flushPending() {
+  if (state.staticMode) return;
   const pending = JSON.parse(localStorage.getItem("iac-reader-pending") || "[]");
   if (!pending.length) return;
   const remaining = [];
@@ -1226,6 +1371,7 @@ async function flushPending() {
 }
 
 async function flushLocalCache(key, endpoint) {
+  if (state.staticMode) return;
   const cached = JSON.parse(localStorage.getItem(key) || "[]");
   for (const payload of cached) {
     try {
@@ -1245,6 +1391,15 @@ async function importProgress(event) {
   try {
     button.textContent = "Importing";
     const payload = JSON.parse(await file.text());
+    if (!Array.isArray(payload.attempts) || !Array.isArray(payload.flags)) throw new Error("Invalid progress backup");
+    if (state.staticMode) {
+      cacheRecords(ATTEMPT_CACHE_KEY, payload.attempts, "client_attempt_id");
+      cacheRecords(FLAG_CACHE_KEY, payload.flags, "client_flag_id");
+      refreshLocalProgress();
+      renderGlobalMetrics();
+      button.textContent = "Imported";
+      return;
+    }
     const response = await fetch("/api/progress/import", {
       method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
     });
@@ -1259,14 +1414,36 @@ async function importProgress(event) {
   }
 }
 
+function downloadStaticProgress(event) {
+  if (!state.staticMode) return;
+  event.preventDefault();
+  const payload = {
+    format: "iac-reader-progress-v1",
+    exported_at: new Date().toISOString(),
+    attempts: readCache(ATTEMPT_CACHE_KEY),
+    flags: readCache(FLAG_CACHE_KEY),
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `iac-reader-progress-${new Date().toISOString().slice(0, 10)}.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 async function loadData() {
   try {
-    await flushPending();
-    await flushLocalCache(ATTEMPT_CACHE_KEY, "/api/attempt");
-    await flushLocalCache(FLAG_CACHE_KEY, "/api/flag");
-    const response = await fetch("/api/bootstrap", { cache: "no-store" });
+    state.staticMode = location.hostname.endsWith("github.io") || new URLSearchParams(location.search).has("static");
+    if (!state.staticMode) {
+      await flushPending();
+      await flushLocalCache(ATTEMPT_CACHE_KEY, "/api/attempt");
+      await flushLocalCache(FLAG_CACHE_KEY, "/api/flag");
+    }
+    const response = await fetch(state.staticMode ? "static/bootstrap.json" : "/api/bootstrap", { cache: "no-store" });
     if (!response.ok) throw new Error("Could not load the studied clue bank");
     state.data = await response.json();
+    if (state.staticMode) refreshLocalProgress();
     $("#loadingView").hidden = true;
     renderDomains();
     renderGlobalMetrics();
@@ -1329,6 +1506,7 @@ function installEvents() {
   $("#flagDialog").addEventListener("cancel", (event) => { event.preventDefault(); cancelFlag(); });
   $("#importProgress").addEventListener("click", () => $("#progressFile").click());
   $("#progressFile").addEventListener("change", importProgress);
+  $("#backupProgress").addEventListener("click", downloadStaticProgress);
   $("#startDuel").addEventListener("click", startDuel);
   $("#duelPause").addEventListener("click", toggleDuelPause);
   $("#duelBuzz").addEventListener("click", duelBuzz);

@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import json
+from pathlib import Path
 import unittest
 
 import server
@@ -133,6 +135,27 @@ class FlagTests(unittest.TestCase):
                 "category": "other",
                 "clue_ids": [],
             }, self.topics, self.clues)
+
+
+class StaticBuildTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.payload = json.loads((Path(__file__).parent / "static/bootstrap.json").read_text(encoding="utf-8"))
+        cls.topics, cls.clues = server.load_bank()
+
+    def test_static_payload_matches_the_canonical_bank(self):
+        self.assertEqual(
+            {topic["id"] for topic in self.payload["topics"]},
+            {topic["id"] for topic in self.topics},
+        )
+        self.assertEqual(
+            {clue["id"] for clue in self.payload["clues"]},
+            {clue["id"] for clue in self.clues},
+        )
+
+    def test_static_payload_contains_no_personal_progress(self):
+        self.assertNotIn("attempts", self.payload)
+        self.assertNotIn("flags", self.payload)
 
 
 if __name__ == "__main__":
