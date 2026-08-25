@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6f2">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>IAC Reader</title>
+  <link rel="stylesheet" href="styles.css?v=1.0.1">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#practice" aria-label="IAC Reader practice">
+      <span class="brand-mark" aria-hidden="true"><b>6</b><b>5</b><b>4</b></span>
+      <span><strong>IAC Reader</strong><small>U.S. History</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <button class="nav-button active" type="button" data-view="practice">Practice</button>
+      <button class="nav-button" type="button" data-view="notRanked">Not Ranked</button>
+      <button class="nav-button" type="button" data-view="ledger">Clue ledger</button>
+      <button class="nav-button" type="button" data-view="sessions">Sessions</button>
+    </nav>
+    <div class="progress-actions">
+      <button id="importProgress" class="header-action" type="button" title="Restore a progress backup">Import</button>
+      <a class="icon-text-button" href="/api/progress" title="Back up attempts and flags">Backup</a>
+      <input id="progressFile" type="file" accept="application/json,.json" hidden>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section id="loadingView" class="loading-view" aria-live="polite">
+      <span class="loading-bar"></span>
+      <p>Loading studied clues</p>
+    </section>
+
+    <section id="practiceView" class="view" hidden>
+      <div id="setupPanel">
+        <div class="page-heading">
+          <div>
+            <p class="kicker">Playoff practice</p>
+            <h1>Build a session</h1>
+          </div>
+          <div id="setupMetrics" class="heading-metrics"></div>
+        </div>
+
+        <div class="setup-grid">
+          <section class="setup-controls">
+            <div class="field-group">
+              <span class="field-label">Answerline selection</span>
+              <div id="rotationControl" class="segmented-control">
+                <button type="button" data-rotation="review" title="Prioritize answerlines containing missed, unseen, or older clues">Review priority</button>
+                <button type="button" data-rotation="coverage" title="Select the least-covered answerlines first">Least covered</button>
+                <button type="button" class="active" data-rotation="random" title="Uniformly shuffle the selected answerline corpus">Random</button>
+              </div>
+            </div>
+
+            <div class="control-row">
+              <label class="field-group" for="questionCount">
+                <span class="field-label">Tossups</span>
+                <select id="questionCount">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20" selected>20</option>
+                  <option value="35">35</option>
+                  <option value="all">Every answerline</option>
+                </select>
+              </label>
+              <label class="field-group" for="cluesPerBand">
+                <span class="field-label">Clues per band</span>
+                <select id="cluesPerBand">
+                  <option value="1">1 · compact</option>
+                  <option value="2" selected>2 · standard</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field-group" for="speedControl">
+              <span class="field-label">Reading speed <output id="speedValue">190 WPM</output></span>
+              <input id="speedControl" type="range" min="100" max="320" step="10" value="190">
+            </label>
+
+            <label class="field-group" for="leniencyControl">
+              <span class="field-label">Answer leniency <output id="leniencyValue">Standard</output></span>
+              <input id="leniencyControl" type="range" min="0" max="2" step="1" value="1">
+            </label>
+
+            <button id="startSession" class="primary-button" type="button">Start session</button>
+          </section>
+
+          <aside class="domain-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="kicker">Question distribution</p>
+                <h2>Fields</h2>
+              </div>
+              <button id="toggleDomains" class="text-button" type="button">Clear all</button>
+            </div>
+            <div id="domainFilters" class="domain-list"></div>
+          </aside>
+        </div>
+      </div>
+
+      <div id="readerPanel" hidden>
+        <div class="session-strip">
+          <div class="session-progress-copy"><strong id="questionProgress">1 / 20</strong><span id="sessionPoints">0 points</span></div>
+          <div class="session-progress-track"><span id="sessionProgressFill"></span></div>
+          <button id="endSession" class="text-button" type="button">End session</button>
+        </div>
+
+        <div class="reader-layout">
+          <section class="reader-stage" aria-live="off">
+            <div class="reader-meta">
+              <span id="zoneBadge" class="zone-badge zone-6">6</span>
+              <span id="readerDomain">Field</span>
+              <span id="readerClock">0.0s</span>
+            </div>
+            <div id="questionText" class="question-text" aria-label="Tossup text"></div>
+            <div id="readerFeedback" class="reader-feedback" hidden></div>
+            <div class="reader-controls">
+              <button id="pauseButton" class="secondary-button" type="button">Pause</button>
+              <button id="buzzButton" class="buzz-button" type="button"><strong>BUZZ</strong><span>Space</span></button>
+              <button id="speedDown" class="icon-button" type="button" title="Read slower" aria-label="Read slower">−</button>
+              <button id="speedUp" class="icon-button" type="button" title="Read faster" aria-label="Read faster">+</button>
+            </div>
+          </section>
+
+          <aside class="question-sidebar">
+            <div class="score-key">
+              <div><span class="score-dot six"></span><strong>6</strong><small>before (+)</small></div>
+              <div><span class="score-dot five"></span><strong>5</strong><small>before (*)</small></div>
+              <div><span class="score-dot four"></span><strong>4</strong><small>remaining text</small></div>
+              <div><span class="score-dot final"></span><strong>3</strong><small>after reading</small></div>
+            </div>
+            <div class="question-coverage">
+              <span>Clues reached</span>
+              <strong id="clueReach">0 / 6</strong>
+              <div id="clueTicks" class="clue-ticks"></div>
+            </div>
+            <button id="flagQuestion" class="secondary-button flag-button" type="button">Flag question</button>
+          </aside>
+        </div>
+      </div>
+
+      <div id="sessionSummary" hidden></div>
+    </section>
+
+    <section id="notRankedView" class="view" hidden>
+      <div id="duelSetup">
+        <div class="page-heading">
+          <div><p class="kicker">Not Ranked</p><h1>Race to 40</h1></div>
+          <div class="target-mark"><strong>40</strong><span>points to win</span></div>
+        </div>
+        <div class="duel-setup-grid">
+          <section class="setup-controls">
+            <label class="field-group" for="duelDifficulty">
+              <span class="field-label">Opponent</span>
+              <select id="duelDifficulty">
+                <option value="semifinalist">Semifinalist</option>
+                <option value="finalist" selected>Finalist</option>
+                <option value="champion">Champion</option>
+                <option value="random">Random buzz · 50%</option>
+              </select>
+            </label>
+            <div class="control-row">
+              <label class="field-group" for="duelCluesPerBand">
+                <span class="field-label">Clues per band</span>
+                <select id="duelCluesPerBand"><option value="1">1 · compact</option><option value="2" selected>2 · standard</option></select>
+              </label>
+              <label class="field-group" for="duelSpeed">
+                <span class="field-label">Reading speed</span>
+                <select id="duelSpeed"><option value="160">160 WPM</option><option value="190" selected>190 WPM</option><option value="220">220 WPM</option><option value="260">260 WPM</option><option value="320">320 WPM</option></select>
+              </label>
+            </div>
+            <button id="startDuel" class="primary-button" type="button">Play against the AI</button>
+          </section>
+          <aside class="duel-rules">
+            <div><strong>6 / 5 / 4 / 3</strong><span>IAC scoring</span></div>
+            <div><strong>−2 / −1</strong><span>incorrect answers</span></div>
+            <div><strong>First to 40</strong><span>wins the match</span></div>
+          </aside>
+        </div>
+      </div>
+
+      <div id="duelGame" hidden>
+        <div class="duel-scoreboard">
+          <div class="duel-player active"><span>You</span><strong id="duelUserScore">0</strong></div>
+          <div class="duel-center"><span id="duelQuestionNumber">Question 1</span><strong>First to 40</strong></div>
+          <div class="duel-player opponent"><span id="duelOpponentName">Finalist</span><strong id="duelAiScore">0</strong></div>
+        </div>
+        <div class="reader-layout">
+          <section class="reader-stage">
+            <div class="reader-meta"><span id="duelZoneBadge" class="zone-badge zone-6">6</span><span id="duelDomain">Field</span><span id="duelClock">0.0s</span></div>
+            <div id="duelQuestionText" class="question-text" aria-label="Not Ranked tossup text"></div>
+            <div id="duelFeedback" class="reader-feedback" hidden></div>
+            <div class="reader-controls">
+              <button id="duelPause" class="secondary-button" type="button">Pause</button>
+              <button id="duelBuzz" class="buzz-button" type="button"><strong>BUZZ</strong><span>Space</span></button>
+              <button id="endDuel" class="secondary-button" type="button">End match</button>
+            </div>
+          </section>
+          <aside class="question-sidebar">
+            <div class="score-key">
+              <div><span class="score-dot six"></span><strong>6</strong><small>before (+)</small></div>
+              <div><span class="score-dot five"></span><strong>5</strong><small>before (*)</small></div>
+              <div><span class="score-dot four"></span><strong>4</strong><small>remaining text</small></div>
+              <div><span class="score-dot final"></span><strong>3</strong><small>after reading</small></div>
+            </div>
+            <div id="duelAiStatus" class="ai-status"><span>Opponent</span><strong>Waiting</strong></div>
+            <button id="flagDuelQuestion" class="secondary-button flag-button" type="button">Flag question</button>
+          </aside>
+        </div>
+      </div>
+      <div id="duelSummary" hidden></div>
+    </section>
+
+    <section id="ledgerView" class="view" hidden>
+      <div class="page-heading">
+        <div><p class="kicker">Retrieval record</p><h1>Clue ledger</h1></div>
+        <div id="ledgerMetrics" class="heading-metrics"></div>
+      </div>
+      <div class="table-toolbar">
+        <label class="search-field"><span class="sr-only">Search clues</span><input id="ledgerSearch" type="search" placeholder="Search answerlines or clues"></label>
+        <select id="ledgerTier" aria-label="Filter by point band">
+          <option value="all">All bands</option>
+          <option value="6">6 points</option>
+          <option value="5">5 points</option>
+          <option value="4">4 points</option>
+        </select>
+        <select id="ledgerStatus" aria-label="Filter by review status">
+          <option value="all">All clues</option>
+          <option value="unseen">Unseen</option>
+          <option value="missed">Missed</option>
+          <option value="buzzed">Buzzed on</option>
+          <option value="seen">Seen</option>
+          <option value="flagged">Flagged</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Clue</th><th>Band</th><th>Seen</th><th>Complete</th><th>Buzz</th><th>Buzz accuracy</th><th>Last shown</th></tr></thead>
+          <tbody id="ledgerBody"></tbody>
+        </table>
+      </div>
+      <button id="loadMoreClues" class="secondary-button table-more" type="button">Show more</button>
+    </section>
+
+    <section id="sessionsView" class="view" hidden>
+      <div class="page-heading">
+        <div><p class="kicker">Attempt history</p><h1>Sessions</h1></div>
+        <div id="sessionMetrics" class="heading-metrics"></div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table session-table">
+          <thead><tr><th>Time</th><th>Answerline</th><th>Result</th><th>Score</th><th>Band</th><th>Trigger clue</th></tr></thead>
+          <tbody id="sessionsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="answerDialog" class="answer-dialog">
+    <form id="answerForm" method="dialog">
+      <div class="dialog-heading"><span id="answerZone" class="zone-badge zone-6">6</span><div><p class="kicker">Your response</p><h2>Enter the answerline</h2></div></div>
+      <input id="answerInput" type="text" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Type your answer">
+      <p id="answerPrompt" class="answer-prompt" aria-live="polite"></p>
+      <div class="dialog-actions"><button id="cancelBuzz" class="secondary-button" type="button">Resume</button><button class="primary-button" type="submit">Submit</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="duelAnswerDialog" class="answer-dialog">
+    <form id="duelAnswerForm" method="dialog">
+      <div class="dialog-heading"><span id="duelAnswerZone" class="zone-badge zone-6">6</span><div><p class="kicker">Not Ranked</p><h2>Enter the answerline</h2></div></div>
+      <input id="duelAnswerInput" type="text" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Type your answer">
+      <p id="duelAnswerPrompt" class="answer-prompt" aria-live="polite"></p>
+      <div class="dialog-actions"><button id="cancelDuelBuzz" class="secondary-button" type="button">Resume</button><button class="primary-button" type="submit">Submit</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="flagDialog" class="answer-dialog">
+    <form id="flagForm" method="dialog">
+      <div class="dialog-heading"><div><p class="kicker">Question flag</p><h2 id="flagAnswerline">Review this question</h2></div></div>
+      <label class="field-group" for="flagCategory"><span class="field-label">Reason</span><select id="flagCategory"><option value="technical">Technical issue</option><option value="revision">Question or answer needs revision</option><option value="study">Study in more depth</option></select></label>
+      <label class="field-group" for="flagNote"><span class="field-label">Note</span><textarea id="flagNote" rows="4" placeholder="Optional detail"></textarea></label>
+      <p id="flagStatus" class="answer-prompt" aria-live="polite"></p>
+      <div class="dialog-actions"><button id="cancelFlag" class="secondary-button" type="button">Cancel</button><button class="primary-button" type="submit">Save flag</button></div>
+    </form>
+  </dialog>
+
+  <script src="app.js?v=1.0.1" defer></script>
+</body>
+</html>
