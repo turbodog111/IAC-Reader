@@ -2,7 +2,7 @@
 
 A local U.S. History Bee playoff reader with clue-level tracking, IAC 6/5/4/3 scoring, and a probabilistic practice opponent.
 
-The repository includes 152 studied answerlines and 1,715 individually tracked clues. It is an independent study tool and is not affiliated with International Academic Competitions.
+The repository includes 153 studied answerlines and 1,730 individually tracked clues. It is an independent study tool and is not affiliated with International Academic Competitions.
 
 **Live reader:** [turbodog111.github.io/IAC-Reader](https://turbodog111.github.io/IAC-Reader/)
 
