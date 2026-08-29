@@ -68,6 +68,10 @@ class BankTests(unittest.TestCase):
         self.assertIn("massachusetts", topics["COL-003"]["promptAliases"])
         self.assertEqual(topics["COL-003"]["questionPrompt"], "name this colony")
 
+    def test_john_adams_surname_requires_a_prompt(self):
+        topics = {topic["id"]: topic for topic in self.topics}
+        self.assertIn("adams", topics["POL-025"]["promptAliases"])
+
 
 class StudyLessonTests(unittest.TestCase):
     @classmethod

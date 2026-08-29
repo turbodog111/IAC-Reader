@@ -75,6 +75,7 @@ SPECIAL_ANSWER_TYPES = {
 
 PROMPT_ALIASES = {
     "COL-003": ["massachusetts"],
+    "POL-025": ["adams"],
 }
 
 
