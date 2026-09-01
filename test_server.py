@@ -100,6 +100,18 @@ class StudyLessonTests(unittest.TestCase):
         self.assertGreater(len(set(association_counts)), 1)
 
 
+class MaintenanceModeTests(unittest.TestCase):
+    def test_us_reader_blocks_every_buzz_entry_point(self):
+        root = Path(__file__).parent
+        html = (root / "index.html").read_text(encoding="utf-8")
+        script = (root / "maintenance.js").read_text(encoding="utf-8")
+        self.assertIn("practiceMaintenanceNotice", html)
+        self.assertIn('src="maintenance.js?v=1.0.0"', html)
+        for control_id in ("startSession", "buzzButton", "startDuel", "duelBuzz"):
+            self.assertIn(f'"{control_id}"', script)
+        self.assertIn('event.code !== "Space"', script)
+
+
 class AttemptTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

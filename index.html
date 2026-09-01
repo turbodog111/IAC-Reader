@@ -8,6 +8,7 @@
   <title>IAC Reader</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=1.2.0">
+  <link rel="stylesheet" href="maintenance.css?v=1.0.0">
 </head>
 <body>
   <header class="topbar">
@@ -28,6 +29,11 @@
       <input id="progressFile" type="file" accept="application/json,.json" hidden>
     </div>
   </header>
+
+  <aside id="practiceMaintenanceNotice" class="maintenance-notice" role="status">
+    <strong>Question rebuild in progress.</strong>
+    <span>Buzzing and AI matches are temporarily paused while the U.S. History clue bank is rewritten to IAC standards. Study, the clue ledger, sessions, and progress tools remain available.</span>
+  </aside>
 
   <main class="app-shell">
     <section id="loadingView" class="loading-view" aria-live="polite">
@@ -305,6 +311,7 @@
     </form>
   </dialog>
 
+  <script src="maintenance.js?v=1.0.0" defer></script>
   <script src="app.js?v=1.2.0" defer></script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+.maintenance-notice {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  padding: 13px clamp(16px, 4vw, 58px);
+  border-bottom: 1px solid #d8b15a;
+  background: #fff5d6;
+  color: #4b3707;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.maintenance-notice strong { font-weight: 800; }
+.maintenance-notice span { color: #66501b; }
+
+button.practice-paused,
+button.practice-paused:hover {
+  cursor: not-allowed;
+  opacity: .58;
+  transform: none;
+}
+
+@media (max-width: 700px) {
+  .maintenance-notice { font-size: 13px; }
+}
