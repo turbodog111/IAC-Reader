@@ -88,13 +88,16 @@ class StudyLessonTests(unittest.TestCase):
         self.assertTrue(lesson_ids.isdisjoint(topic_ids))
 
     def test_lessons_use_compact_association_structure(self):
+        association_counts = []
         for lesson in self.lessons:
             self.assertEqual(lesson["format"], "compact-association-v1")
             self.assertGreaterEqual(len(lesson["associations"]), 12)
+            association_counts.append(len(lesson["associations"]))
             self.assertEqual(set(lesson["iacRoute"]), {"4", "5", "6"})
             self.assertTrue(all(len(lesson["iacRoute"][tier]) >= 3 for tier in ("4", "5", "6")))
             self.assertGreaterEqual(len(lesson["confusables"]), 4)
             self.assertTrue(lesson["sources"])
+        self.assertGreater(len(set(association_counts)), 1)
 
 
 class AttemptTests(unittest.TestCase):

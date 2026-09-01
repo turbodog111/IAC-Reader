@@ -146,12 +146,20 @@
           "text": "He signed the Budget and Accounting Act of 1921, creating the Bureau of the Budget and General Accounting Office, and the protectionist Fordney-McCumber Tariff in 1922."
         },
         {
+          "label": "Phipps Act and Pershing Map",
+          "text": "The 1921 Federal Highway Act, often called the Phipps Act, concentrated federal aid on a connected primary-road system. His administration also commissioned the Pershing Map, which identified roads considered essential for national defense; IAC used both as early clues."
+        },
+        {
           "label": "Eugene Debs",
           "text": "On Christmas 1921 he commuted the socialist leader's wartime Espionage Act sentence. Debs then visited the White House, making the episode an unusual reconciliation clue."
         },
         {
           "label": "Birmingham speech",
           "text": "Speaking in segregated Alabama in 1921, he endorsed political equality for Black Americans while accepting social separation. The speech angered many white Southerners but fell far short of full racial equality."
+        },
+        {
+          "label": "Daugherty and Jess Smith",
+          "text": "Attorney General Harry Daugherty was his longtime political manager. Daugherty's aide Jess Smith operated from the Little Green House on K Street and died by suicide as influence-peddling allegations closed in, giving the Ohio Gang a second route beyond Teapot Dome."
         },
         {
           "label": "Nan Britton and Carrie Phillips",
@@ -260,6 +268,14 @@
           "text": "He spent two years imprisoned there, initially in shackles, and was charged with treason but never tried. Horace Greeley and other prominent Northerners helped secure his bail."
         },
         {
+          "label": "Virginia Clay correspondence",
+          "text": "While imprisoned, he exchanged an intimate three-year correspondence with Virginia Clay, whose husband Clement Claiborne Clay was also held at Fort Monroe. IAC used reports that the two later appeared together on a train as an early biographical clue."
+        },
+        {
+          "label": "Sarah Dorsey and Beauvoir",
+          "text": "Widow Sarah Anne Ellis Dorsey hosted him at Beauvoir and left the Mississippi estate to him in her will. His residence there produced gossip and supplied the setting where he completed his defense of the Confederacy."
+        },
+        {
           "label": "Varina, Beauvoir, and his defense",
           "text": "His second wife Varina Howell survived him. At Beauvoir in Mississippi he wrote The Rise and Fall of the Confederate Government, presenting secession as constitutional and minimizing slavery's centrality."
         }
@@ -346,12 +362,20 @@
           "text": "Later in 1919 he argued that truth should prevail through competition in the marketplace of ideas. Zechariah Chafee and Judge Learned Hand likely influenced his shift."
         },
         {
+          "label": "Baltzer dissent",
+          "text": "The Court declined to publish his dissent from dismissal of Baltzer v. United States, which challenged punishment of German-American draft opponents. His secretary circulated it privately, and its defense of dissent anticipated the more famous Abrams opinion."
+        },
+        {
           "label": "Debs and Frohwerk",
           "text": "Along with Schenck, these cases formed a trilogy upholding wartime Espionage Act convictions. Do not assume every opinion associated with him protected dissenters."
         },
         {
           "label": "Northern Securities",
           "text": "He dissented when the Court broke up J. P. Morgan's railroad combination. Theodore Roosevelt regarded the vote as a personal betrayal by his appointee."
+        },
+        {
+          "label": "Pennsylvania Coal and Missouri v. Holland",
+          "text": "He wrote that regulation can become a taking when it goes too far in Pennsylvania Coal, but upheld federal treaty power over migratory birds in Missouri v. Holland. The pairing shows why his federalism cannot be reduced to one slogan."
         },
         {
           "label": "Silverthorne",
@@ -426,6 +450,14 @@
         {
           "label": "No Cross, No Crown",
           "text": "This 1669 prison treatise defended Quaker spirituality and plain conduct, including refusal of flattering titles and insistence on addressing individuals as thou."
+        },
+        {
+          "label": "The Sandy Foundation Shaken",
+          "text": "This 1668 tract attacked conventional formulations of the Trinity and led to his imprisonment in the Tower of London. He answered charges of atheism with Innocency with Her Open Face, clarifying his theology without abandoning Quaker beliefs."
+        },
+        {
+          "label": "Truth Exalted",
+          "text": "His 1668 Truth Exalted: To Princes, Priests, and People attacked established churches and lists such as Ursulines, Capuchins, and Benedictines. Those unusual names have already served as an IAC opening route."
         },
         {
           "label": "Penn and Mead trial",
@@ -538,6 +570,10 @@
           "text": "Organized as responses to Francois Barbe-Marbois, this book covers geography, government, and natural history while exposing his racist assumptions and anxieties about slavery."
         },
         {
+          "label": "Banneker and Gregoire",
+          "text": "Benjamin Banneker sent him an almanac in 1791 while challenging his racial views; he replied that he wished to see evidence of equal Black talents. He later dismissed Henri Gregoire's account of Black achievement in similarly revealing correspondence."
+        },
+        {
           "label": "Paris, Maria Cosway, and the Hemingses",
           "text": "As minister to France he wrote the Head and Heart dialogue to Maria Cosway. Sally Hemings accompanied his household, and strong historical and genetic evidence identifies him as father of her children."
         },
@@ -548,6 +584,10 @@
         {
           "label": "Kentucky Resolutions",
           "text": "After the Alien and Sedition Acts, he secretly drafted Kentucky's resolutions while Madison wrote Virginia's. Their compact reasoning later fed nullification arguments."
+        },
+        {
+          "label": "Danbury Baptists",
+          "text": "In an 1802 letter to Connecticut Baptists, he described the First Amendment as building a wall of separation between church and state. The phrase became far more influential through later Supreme Court opinions."
         },
         {
           "label": "Revolution of 1800",
@@ -564,6 +604,18 @@
         {
           "label": "Embargo",
           "text": "The 1807 ban on American overseas commerce attempted peaceful coercion after British and French violations. Smuggling and economic pain made it one of his presidency's greatest failures."
+        },
+        {
+          "label": "Jefferson Bible",
+          "text": "He cut and pasted passages from the Gospels into The Life and Morals of Jesus of Nazareth, removing miracles and the Resurrection while preserving ethical teachings. IAC may describe this literally edited New Testament."
+        },
+        {
+          "label": "Adam and Eve letter",
+          "text": "In a 1793 letter to William Short defending the French Revolution, he wrote that even half the earth desolated and only an Adam and Eve left in every country could be preferable to failed liberty. The extreme language opened an IAC presidential question."
+        },
+        {
+          "label": "Final Jubilee letter",
+          "text": "Too ill to attend the fiftieth-anniversary celebration in Washington, D.C., he sent Mayor Roger Weightman a final public letter calling the Declaration an instrument pregnant with the fate of the world. He died ten days later on July 4, 1826."
         },
         {
           "label": "Monticello, the university, and July Fourth",
@@ -656,6 +708,10 @@
           "text": "He supported Interior Secretary Richard Ballinger and dismissed conservationist Gifford Pinchot after Pinchot publicly attacked Ballinger. The controversy accelerated Roosevelt's break with him."
         },
         {
+          "label": "Louis Glavis",
+          "text": "General Land Office investigator Louis Glavis accused Ballinger of improperly favoring Alaskan coal claimants. His dismissal and publication of the charges in Collier's turned a technical land dispute into the administration's defining conservation scandal."
+        },
+        {
           "label": "More antitrust cases",
           "text": "His administration filed more antitrust suits than Roosevelt's, including actions against Standard Oil and American Tobacco. Yet Roosevelt criticized its case against U.S. Steel."
         },
@@ -664,8 +720,20 @@
           "text": "Roosevelt's Progressive Party split Republican voters. The incumbent finished third behind Woodrow Wilson and Roosevelt, carrying only Utah and Vermont."
         },
         {
+          "label": "Archibald Butt and the Titanic",
+          "text": "He urged his exhausted military aide Archibald Butt to take a vacation in 1912. Butt died returning aboard the Titanic, and the president was reportedly devastated by the loss."
+        },
+        {
           "label": "Chief justice, 1921",
           "text": "Harding appointed him to succeed Edward Douglass White. He remains the only person to have headed both the executive branch and the Supreme Court."
+        },
+        {
+          "label": "The Taft Court",
+          "text": "His Court upheld zoning in Village of Euclid, struck down a minimum-wage law in Adkins, and applied free speech against the states in Gitlow. Its bench included Holmes, Brandeis, McReynolds, and Van Devanter; serial killer Carl Panzram later used a gun stolen from the chief justice's New Haven home, an especially distinctive IAC clue."
+        },
+        {
+          "label": "Appointments and Edward Douglass White",
+          "text": "As president he made six Supreme Court appointments and elevated Edward Douglass White to chief justice. Only Washington and Franklin Roosevelt appointed more justices; Harding later appointed the former president to succeed White."
         },
         {
           "label": "Judges' Bill and Supreme Court building",
@@ -766,8 +834,20 @@
           "text": "His Report on Manufactures promoted industrial development, while his department created customs administration and the Revenue Cutter Service, an ancestor of the Coast Guard."
         },
         {
+          "label": "Paterson and the useful-manufactures society",
+          "text": "He helped found the Society for Establishing Useful Manufactures, which planned the industrial city of Paterson around the Passaic Falls. Treasury aide Tench Coxe contributed research and drafting to his reports before later changing parties."
+        },
+        {
           "label": "Reynolds Pamphlet",
           "text": "To rebut corruption charges involving James Reynolds, he publicly admitted an affair with Maria Reynolds. The confession protected his financial reputation while destroying his family and political standing."
+        },
+        {
+          "label": "The New-York Evening Post",
+          "text": "He and allied investors founded the newspaper in 1801 to give Federalists a New York voice; William Coleman became its first editor. The paper survives as the New York Post."
+        },
+        {
+          "label": "Quasi-War army",
+          "text": "During the undeclared naval conflict with France, Washington became nominal commander of a provisional army and insisted on him as the active second-in-command. Adams distrusted the resulting military buildup and his ambitions, deepening their fatal Federalist split."
         },
         {
           "label": "Adams, Burr, and Weehawken",
@@ -974,6 +1054,18 @@
           "text": "His administration created the Environmental Protection Agency, signed OSHA and major environmental laws, imposed wage-price controls, and ended dollar convertibility into gold in the Nixon Shock."
         },
         {
+          "label": "Six Crises",
+          "text": "His 1962 memoir treated the Hiss case, the fund controversy and Checkers speech, Eisenhower's illnesses, the attack on him in Caracas, the Kitchen Debate, and the 1960 campaign as six tests of character."
+        },
+        {
+          "label": "Nixon Agonistes and The Imperial Presidency",
+          "text": "Garry Wills's Nixon Agonistes interpreted the 1968 campaign and his political personality. Arthur Schlesinger Jr.'s The Imperial Presidency used his administration as the culmination of expanding executive power."
+        },
+        {
+          "label": "The Final Days",
+          "text": "Bob Woodward and Carl Bernstein reconstructed the administration's collapse in this 1976 book. It follows All the President's Men, which concentrates on their reporting from the break-in through the 1972 election."
+        },
+        {
           "label": "Watergate and resignation",
           "text": "The break-in, cover-up, White House tapes, Saturday Night Massacre, and United States v. Nixon destroyed his presidency. He resigned on August 9, 1974, and Gerald Ford later pardoned him."
         }
@@ -1056,6 +1148,10 @@
           "text": "He fought a larger proslavery force near this Kansas settlement, producing the nickname Osawatomie attached to him. A later progressive magazine adopted the same name."
         },
         {
+          "label": "Tragic Prelude",
+          "text": "John Steuart Curry's Kansas State Capitol mural places him at the center holding a rifle and a Bible before a tornado and prairie fire. The image has already anchored an IAC question."
+        },
+        {
           "label": "The Secret Six",
           "text": "Thomas Wentworth Higginson, Theodore Parker, Samuel Gridley Howe, Franklin Sanborn, George Luther Stearns, and Gerrit Smith supplied varying degrees of support for his plans."
         },
@@ -1074,6 +1170,18 @@
         {
           "label": "Lee, Stuart, and Israel Greene",
           "text": "Colonel Robert E. Lee commanded the response, J. E. B. Stuart delivered the surrender demand, and Marine lieutenant Israel Greene helped storm the engine house."
+        },
+        {
+          "label": "Isaac Smith and the Virginia trial",
+          "text": "He had rented the nearby Kennedy Farm under the alias Isaac Smith. At Charles Town, Judge Richard Parker presided, Andrew Hunter prosecuted, Governor Henry Wise rejected pleas for delay, and Lewis Washington testified."
+        },
+        {
+          "label": "Silas Soule and Year of Meteors",
+          "text": "After the raid, Kansas friend Silas Soule offered to break him out of the Charles Town jail and flee north to New York or Canada; he refused, believing his execution would better serve abolition. Walt Whitman's Year of Meteors remembered him simply as an old man escorted to execution."
+        },
+        {
+          "label": "Victor Hugo and Lydia Maria Child",
+          "text": "Victor Hugo compared Virginia's execution to Washington killing Spartacus, while Lydia Maria Child publicly defended the prisoner and offered nursing aid. Their interventions helped transform a defeated raider into an international martyr."
         },
         {
           "label": "Trial, final note, and martyrdom",
@@ -1178,8 +1286,16 @@
           "text": "He and Owen Roberts occupied the Court's center between conservative and liberal blocs. Their votes became decisive in New Deal constitutional cases."
         },
         {
+          "label": "Blaisdell and constitutional adaptation",
+          "text": "In Home Building & Loan v. Blaisdell, he upheld Minnesota's temporary mortgage moratorium despite the Contract Clause. The opinion argued that constitutional restraints must be read in light of genuine emergencies."
+        },
+        {
           "label": "Court-packing and the 1937 shift",
           "text": "He rebutted Roosevelt's claim that the Court was behind on work in a letter to Burton Wheeler. He then led majorities sustaining labor and Social Security laws after the constitutional shift."
+        },
+        {
+          "label": "Jones & Laughlin and Social Security",
+          "text": "After the minimum-wage pivot in West Coast Hotel, he wrote NLRB v. Jones & Laughlin Steel upholding federal labor regulation. He also joined the 1937 majorities sustaining unemployment compensation in Steward Machine and old-age benefits in Helvering v. Davis."
         }
       ],
       "iacRoute": {
@@ -1272,12 +1388,24 @@
           "text": "Jacksonians portrayed his purchase of a billiard table with personal funds as aristocratic extravagance. The minor controversy illustrates the relentless opposition to his presidency."
         },
         {
+          "label": "David Porter and Fajardo",
+          "text": "He court-martialed naval hero David Porter after Porter landed forces at Fajardo, Puerto Rico, to demand redress for an officer's detention. The obscure Caribbean episode has opened an IAC question on his presidency."
+        },
+        {
+          "label": "Poinsett and the Panama Congress",
+          "text": "He appointed Joel Roberts Poinsett minister to Mexico and sought delegates to Simon Bolivar's 1826 Congress of Panama. Southern and Jacksonian opposition delayed the mission until participation became meaningless."
+        },
+        {
           "label": "Old Man Eloquent",
           "text": "Returning to the House in 1831, he fought the gag rule that automatically tabled antislavery petitions. Congress finally repealed it in 1844."
         },
         {
           "label": "The Amistad argument",
           "text": "He argued before the Supreme Court for the freedom of the African captives in 1841. His lengthy presentation invoked natural rights and the Declaration."
+        },
+        {
+          "label": "George Washington Adams",
+          "text": "His troubled eldest son disappeared from the steamship Benjamin Franklin in 1829 and was presumed to have died by suicide. IAC has used the ship and disappearance as an early presidential-biography clue."
         },
         {
           "label": "Smithsonian and final collapse",
@@ -1366,6 +1494,10 @@
           "text": "He sought a lower tariff, restoration of the independent treasury, settlement of the Oregon boundary, and acquisition of California. By one term's end he had achieved all four."
         },
         {
+          "label": "Walker Tariff and Independent Treasury",
+          "text": "Treasury Secretary Robert J. Walker designed the lower 1846 tariff, while the Independent Treasury Act restored federal custody of government funds outside private banks. Together they fulfilled half of his four-part domestic program."
+        },
+        {
           "label": "Oregon and forty-nine",
           "text": "Campaign expansionists demanded all territory to latitude 54 degrees 40 minutes, but the 1846 Oregon Treaty compromised with Britain largely along the forty-ninth parallel."
         },
@@ -1380,6 +1512,14 @@
         {
           "label": "Trist and Guadalupe Hidalgo",
           "text": "He recalled diplomat Nicholas Trist, but Trist ignored the order and completed the 1848 treaty. Mexico ceded vast western territory for fifteen million dollars."
+        },
+        {
+          "label": "River and Harbor veto",
+          "text": "In 1846 he vetoed an internal-improvements bill containing many local projects, arguing that federal spending required a genuinely national purpose. The veto is a useful policy clue distinct from territorial expansion."
+        },
+        {
+          "label": "Dixon Lewis and the treasury bill",
+          "text": "Alabama senator Dixon Hall Lewis managed the Independent Treasury measure in the Senate and was a close administration ally. That less familiar name can identify the president through his domestic program."
         },
         {
           "label": "One term and 103 days",
