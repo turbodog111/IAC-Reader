@@ -84,6 +84,11 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .lesson-section h2, .lesson-sources h2 { margin: 0 0 14px; font-size: 18px; }
 .lesson-section p { margin: 0 0 12px; color: #343b34; font-family: Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.7; }
 .lesson-section p:last-child { margin-bottom: 0; }
+.lesson-associations { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+.lesson-associations li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.lesson-associations li > span { width: 25px; height: 25px; display: grid; place-items: center; border: 1px solid var(--green); border-radius: 50%; color: var(--green); font-size: 11px; font-weight: 850; }
+.lesson-associations h2 { margin: 1px 0 5px; font-size: 15px; }
+.lesson-associations p { margin: 0; color: #343b34; font-family: Georgia, "Times New Roman", serif; font-size: 16px; line-height: 1.65; }
 .lesson-timeline { border-top: 1px solid var(--ink); }
 .timeline-row { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 18px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .timeline-row time { color: var(--green); font-size: 13px; font-weight: 800; }

@@ -79,19 +79,22 @@ class StudyLessonTests(unittest.TestCase):
         path = Path(__file__).parent / "study/lessons.json"
         cls.lessons = json.loads(path.read_text(encoding="utf-8"))["lessons"]
 
-    def test_each_lesson_maps_to_a_packaged_answerline(self):
+    def test_reading_queue_is_new_material(self):
         topics, _ = server.load_bank()
         topic_ids = {topic["id"] for topic in topics}
-        self.assertEqual({lesson["id"] for lesson in self.lessons}, {"COL-001", "COL-002", "COL-003"})
-        self.assertTrue(all(lesson["id"] in topic_ids for lesson in self.lessons))
+        lesson_ids = {lesson["id"] for lesson in self.lessons}
+        self.assertEqual(len(lesson_ids), 15)
+        self.assertTrue(lesson_ids.isdisjoint({"COL-001", "COL-002", "COL-003"}))
+        self.assertTrue(lesson_ids.isdisjoint(topic_ids))
 
-    def test_lessons_include_full_retrieval_structure(self):
+    def test_lessons_use_compact_association_structure(self):
         for lesson in self.lessons:
-            self.assertGreaterEqual(len(lesson["sections"]), 3)
-            self.assertGreaterEqual(len(lesson["timeline"]), 6)
-            self.assertEqual(set(lesson["clueLadder"]), {"4", "5", "6"})
-            self.assertTrue(all(len(lesson["clueLadder"][tier]) >= 5 for tier in ("4", "5", "6")))
-            self.assertGreaterEqual(len(lesson["retrieval"]), 5)
+            self.assertEqual(lesson["format"], "compact-association-v1")
+            self.assertGreaterEqual(len(lesson["associations"]), 12)
+            self.assertEqual(set(lesson["iacRoute"]), {"4", "5", "6"})
+            self.assertTrue(all(len(lesson["iacRoute"][tier]) >= 3 for tier in ("4", "5", "6")))
+            self.assertGreaterEqual(len(lesson["confusables"]), 4)
+            self.assertTrue(lesson["sources"])
 
 
 class AttemptTests(unittest.TestCase):

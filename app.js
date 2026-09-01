@@ -314,6 +314,30 @@ function renderStudy() {
 
 function renderStudyArticle(lesson, reviewed) {
   const reviewDate = reviewed[lesson.id] ? formatDate(reviewed[lesson.id]) : null;
+  if (lesson.format === "compact-association-v1") {
+    const associations = lesson.associations.map((item, index) => `
+      <li><span>${index + 1}</span><div><h2>${escapeHtml(item.label)}</h2><p>${escapeHtml(item.text)}</p></div></li>`).join("");
+    const clueBands = [6, 5, 4].map((tier) => `
+      <section class="lesson-clue-band tier-${tier}">
+        <div><span>${tier}</span><strong>${tier === 6 ? "Early" : tier === 5 ? "Middle" : "Conversion"} route</strong></div>
+        <ul>${lesson.iacRoute[String(tier)].map((clue) => `<li>${escapeHtml(clue)}</li>`).join("")}</ul>
+      </section>`).join("");
+    const confusables = lesson.confusables.map((item) => `
+      <tr><th>${escapeHtml(item.term)}</th><td>${escapeHtml(item.distinction)}</td></tr>`).join("");
+    const sources = lesson.sources.map((source) => `
+      <li><a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a></li>`).join("");
+    $("#studyArticle").innerHTML = `
+      <header class="lesson-header">
+        <div><p class="lesson-era">${escapeHtml(lesson.era)}</p><h1>${escapeHtml(lesson.title)}</h1><p class="lesson-deck">${escapeHtml(lesson.orientation)}</p></div>
+        <button id="toggleStudyReview" class="${reviewDate ? "secondary-button reviewed-button" : "primary-button"}" type="button">${reviewDate ? `Reviewed ${escapeHtml(reviewDate)}` : "Mark reviewed"}</button>
+      </header>
+      <section class="lesson-section"><h2>Distinctive associations</h2><ol class="lesson-associations">${associations}</ol></section>
+      <section class="lesson-section"><h2>Exact IAC route</h2><div class="lesson-clue-ladder">${clueBands}</div></section>
+      <section class="lesson-section"><h2>Confusion locks</h2><div class="confusable-wrap"><table class="confusable-table"><tbody>${confusables}</tbody></table></div></section>
+      <section class="lesson-sources"><h2>Question record</h2><ul>${sources}</ul></section>`;
+    $("#toggleStudyReview").addEventListener("click", toggleStudyReview);
+    return;
+  }
   const timeline = lesson.timeline.map((entry) => `
     <div class="timeline-row"><time>${escapeHtml(entry.year)}</time><p>${escapeHtml(entry.event)}</p></div>`).join("");
   const sections = lesson.sections.map((section) => `

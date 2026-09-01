@@ -36,17 +36,20 @@ DOMAIN_NAMES = {
     "EVT": "Events and incidents",
     "EXP": "Expansion and exploration",
     "FAC": "Political factions",
+    "FOR": "Foreign relations",
     "GOV": "Government and orations",
     "LAB": "Labor",
     "LAW": "Law and courts",
     "LEG": "Legislation",
     "LIT": "Literature",
     "MISC": "Culture and society",
+    "MIL": "Military figures",
     "MON": "Monuments",
     "PH": "Photography",
     "POL": "Political figures",
     "REF": "Reform and civil rights",
     "REL": "Religion",
+    "IND": "Indigenous history",
     "VA": "Visual arts",
     "WAR": "Wars and conflicts",
 }
@@ -71,6 +74,11 @@ SPECIAL_ANSWER_TYPES = {
     "MISC-043": "pamphlet",
     "MISC-044": "series of essays",
     "MISC-045": "city or settlement",
+    "MISC-048": "communal experiment",
+    "FOR-001": "person",
+    "IND-001": "person",
+    "LAW-004": "person",
+    "MIL-012": "person",
 }
 
 PROMPT_ALIASES = {
