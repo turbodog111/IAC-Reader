@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parent
 CORPUS = ROOT / "corpus" / "master_clues.jsonl"
 LESSON_FILE = ROOT / "study" / "lessons.json"
 CLUES: list[dict] = []
+COMPLETED_LESSON_IDS = {"POL-030", "POL-031"}
+PENDING_LESSONS = [lesson for lesson in LESSONS if lesson["id"] not in COMPLETED_LESSON_IDS]
 
 
 def add(anchor: str, answerline: str, tier: int, *texts: str) -> None:
@@ -28,6 +30,45 @@ def add(anchor: str, answerline: str, tier: int, *texts: str) -> None:
             "source": "compact lesson and IAC corpus audit, 2026-08-31",
             "status": "active",
         })
+
+
+add("POL-030", "John Winthrop", 6,
+    "This Puritan signed the 1629 Cambridge Agreement, which made emigration conditional on transferring a chartered company's government to New England.",
+    "This colonial leader owned the trading vessel Blessing of the Bay and participated with William Pynchon in the fur trade.",
+    "This governor's namesake son founded New London, led the Saybrook project, and secured Connecticut's royal charter of 1662.",
+    "This magistrate distinguished lawless natural liberty from morally ordered civil or federal liberty in a 1645 speech.",
+    "This leader's journal covering 1630 through 1649 was later published as The History of New England.")
+add("POL-030", "John Winthrop", 5,
+    "This preacher warned that failure would make his community a story and a by-word after stating that the party loving reaps love again.",
+    "This magistrate privately warned Roger Williams of an imminent arrest, allowing the dissenter to flee Massachusetts.",
+    "This governor alternated in office with John Endecott, Thomas Dudley, Henry Vane, and Richard Bellingham.",
+    "This leader crossed aboard the Arbella as head of the much larger 1630 migration that shifted settlement toward Boston.",
+    "This magistrate returned to power during the Antinomian Controversy and supported the banishment of Anne Hutchinson.")
+add("POL-030", "John Winthrop", 4,
+    "This Puritan described his Massachusetts community through the biblical image of a city upon a hill.",
+    "This leader wrote the sermon A Model of Christian Charity during the migration of 1630.",
+    "This politician served twelve annual terms across four separate periods as governor of Massachusetts Bay.",
+    "This colonial leader headed the fleet that brought hundreds of Puritan settlers to New England in 1630.",
+    "This Massachusetts Bay governor became the colony's defining early political leader after John Endecott.")
+
+add("POL-031", "Warren G. Harding", 6,
+    "This politician purchased the Marion Star in 1884 and built it with the financial and circulation work of Florence Kling.",
+    "This president signed the Phipps Act for a connected federal highway system while his administration commissioned the defense-oriented Pershing Map.",
+    "This president endorsed political and economic equality for Black Americans in a 1921 Birmingham speech while still accepting social separation.",
+    "This president commuted Eugene Debs's Espionage Act sentence on Christmas 1921 and then received the socialist at the White House.",
+    "This president confronted a Veterans Bureau scandal in which Charles Forbes manipulated hospital contracts and diverted government supplies.")
+add("POL-031", "Warren G. Harding", 5,
+    "This candidate's manager Harry Daugherty predicted that a deadlocked convention would select him in a smoke-filled room.",
+    "This president's secretary of state opened the Washington Naval Conference with a ship-scrapping proposal that produced a five-five-three capital-ship ratio.",
+    "This president signed the Budget and Accounting Act, which created the Bureau of the Budget and the General Accounting Office.",
+    "This president's Ohio Gang included Jess Smith, whose influence-peddling network operated from the Little Green House on K Street.",
+    "This president became the first sitting chief executive to visit Alaska during the 1923 Voyage of Understanding before dying in San Francisco.")
+add("POL-031", "Warren G. Harding", 4,
+    "This Republican defeated James Cox in 1920 after conducting a front-porch campaign from Marion, Ohio.",
+    "This president promised a return to normalcy after World War One, labor unrest, and the First Red Scare.",
+    "This president's administration was damaged when Albert Fall secretly leased the Teapot Dome and Elk Hills petroleum reserves.",
+    "This twenty-ninth president died in 1923 and was succeeded by Calvin Coolidge.",
+    "This president's administration became synonymous with the Ohio Gang and the Teapot Dome scandal.")
 
 
 add("POL-026", "Aaron Burr", 6,
@@ -215,11 +256,11 @@ def main() -> None:
         encoding="utf-8",
     )
     LESSON_FILE.write_text(
-        json.dumps({"lessons": LESSONS}, ensure_ascii=True, indent=2) + "\n",
+        json.dumps({"lessons": PENDING_LESSONS}, ensure_ascii=True, indent=2) + "\n",
         encoding="utf-8",
     )
     print(f"Installed {len(CLUES)} clues across {len(replaced)} studied answerlines.")
-    print(f"Installed {len(LESSONS)} compact lessons for the next reading queue.")
+    print(f"Installed {len(PENDING_LESSONS)} compact lessons for the next reading queue.")
 
 
 if __name__ == "__main__":

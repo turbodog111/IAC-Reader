@@ -83,9 +83,20 @@ class StudyLessonTests(unittest.TestCase):
         topics, _ = server.load_bank()
         topic_ids = {topic["id"] for topic in topics}
         lesson_ids = {lesson["id"] for lesson in self.lessons}
-        self.assertEqual(len(lesson_ids), 15)
+        self.assertEqual(len(lesson_ids), 13)
         self.assertTrue(lesson_ids.isdisjoint({"COL-001", "COL-002", "COL-003"}))
         self.assertTrue(lesson_ids.isdisjoint(topic_ids))
+        self.assertEqual(self.lessons[0]["title"], "Jefferson Davis")
+
+    def test_completed_lessons_enter_the_clue_bank(self):
+        topics, clues = server.load_bank()
+        topic_ids = {topic["id"] for topic in topics}
+        self.assertTrue({"POL-030", "POL-031"}.issubset(topic_ids))
+        for answer_id in ("POL-030", "POL-031"):
+            topic_clues = [clue for clue in clues if clue["answerId"] == answer_id]
+            self.assertEqual(len(topic_clues), 15)
+            self.assertEqual({clue["tier"] for clue in topic_clues}, {4, 5, 6})
+            self.assertTrue(all("this" in clue["text"].lower().split()[:15] for clue in topic_clues))
 
     def test_lessons_use_compact_association_structure(self):
         association_counts = []
