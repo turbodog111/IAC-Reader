@@ -12,6 +12,10 @@
           "text": "He was born in Kentucky less than a year and roughly one hundred miles from Abraham Lincoln. At West Point he narrowly avoided punishment for his role in the 1826 Eggnog Riot."
         },
         {
+          "label": "Black Hawk escort",
+          "text": "After graduating in 1828, he served on the northwestern frontier. During the Black Hawk War, he helped escort the captured Black Hawk to confinement, an early military clue IAC has used before any mention of Mississippi politics."
+        },
+        {
           "label": "Sarah Knox Taylor",
           "text": "While serving under Zachary Taylor, he married the commander's daughter Sarah Knox. Both contracted malaria at Locust Grove, and she died only three months after the wedding."
         },
@@ -20,16 +24,36 @@
           "text": "His wealthy brother Joseph established him at Brierfield plantation on Davis Bend, Mississippi. Enslaved labor supported the plantation and his return to public life."
         },
         {
+          "label": "Varina Howell, 1845",
+          "text": "After nearly a decade as a planter, he married Varina Howell and entered Congress in 1845. Varina became the Confederacy's first lady and later wrote Jefferson Davis: A Memoir by His Wife."
+        },
+        {
           "label": "Mississippi Rifles",
           "text": "He commanded this volunteer regiment in the Mexican-American War. At Buena Vista his troops used a V-shaped formation, and he suffered a serious foot wound."
+        },
+        {
+          "label": "Congress and Guadalupe Hidalgo",
+          "text": "Mississippi sent the wounded war hero to the Senate in 1847, where he chaired the Military Affairs Committee. He proposed an unsuccessful amendment to the Treaty of Guadalupe Hidalgo that would have taken additional parts of Tamaulipas, Nuevo Leon, Coahuila, and Chihuahua."
         },
         {
           "label": "Franklin Pierce's secretary of war",
           "text": "From 1853 to 1857 he enlarged and modernized the army, supported surveys for a transcontinental railroad, and oversaw the experimental Camel Corps."
         },
         {
+          "label": "Railroad surveys, aqueduct, and Gadsden",
+          "text": "His department commissioned the Pacific Railroad Surveys, promoted the southern route associated with the Gadsden Purchase, and supervised construction of the Washington Aqueduct. These projects form a second War Department route independent of the camels."
+        },
+        {
+          "label": "Crimean War observers",
+          "text": "He sent Richard Delafield, Alfred Mordecai, and George B. McClellan to observe European armies during the Crimean War. McClellan's later Union career makes this a particularly useful prewar clue."
+        },
+        {
           "label": "Senate resignation",
           "text": "He had defended slavery and states' rights but initially regarded immediate secession as strategically dangerous. He resigned from the Senate after Mississippi left the Union in January 1861."
+        },
+        {
+          "label": "Committee of Thirteen and farewell",
+          "text": "He joined the Senate Committee of Thirteen that unsuccessfully sought a final sectional compromise. On January 21, 1861, he delivered an emotional farewell arguing that Mississippi had exercised a lawful right of secession."
         },
         {
           "label": "Chosen at Montgomery",
@@ -40,12 +64,32 @@
           "text": "He governed from the Confederate White House after the capital moved from Montgomery. His vice president was Alexander Stephens; major cabinet figures included Judah Benjamin and Robert Toombs."
         },
         {
+          "label": "Cabinet map",
+          "text": "Robert Toombs began as secretary of state, Stephen Mallory remained navy secretary, and Judah Benjamin moved from attorney general to war and then state. Remembering those offices prevents every Confederate-cabinet clue from collapsing into the same name."
+        },
+        {
           "label": "Johnston and Bragg",
           "text": "His difficult relationship with Joseph E. Johnston damaged Confederate command, while his continued confidence in Braxton Bragg generated further controversy. These names can identify his wartime leadership."
         },
         {
+          "label": "Lee after Seven Pines",
+          "text": "After Joseph E. Johnston was wounded at Seven Pines in 1862, he placed Robert E. Lee in direct command of the force Lee renamed the Army of Northern Virginia. Davis remained the civilian commander in chief, not Lee's field subordinate."
+        },
+        {
           "label": "Conscription and centralization",
           "text": "The Confederacy adopted national conscription, taxation, impressment, and suspension of habeas corpus. These measures exposed the tension between states' rights rhetoric and wartime central power."
+        },
+        {
+          "label": "Brown, Vance, and governors",
+          "text": "Georgia governor Joseph E. Brown and North Carolina governor Zebulon Vance resisted conscription, impressment, and habeas suspensions. Their disputes with the Confederate president are the clearest route into his centralization problem."
+        },
+        {
+          "label": "Dahlgren papers",
+          "text": "Alleged orders found after Ulric Dahlgren's failed 1864 raid called for burning Richmond and killing Davis and his cabinet. Their authenticity remains disputed, so treat this as the Dahlgren Affair rather than a proven assassination order."
+        },
+        {
+          "label": "General Orders No. 14",
+          "text": "Only in March 1865 did his government authorize recruiting enslaved men with owners' consent. The measure came too late to produce a meaningful Confederate Black force and did not itself grant general emancipation."
         },
         {
           "label": "Capture and the petticoat story",
@@ -53,7 +97,11 @@
         },
         {
           "label": "Fort Monroe",
-          "text": "He spent two years imprisoned there, initially in shackles, and was charged with treason but never tried. Horace Greeley and other prominent Northerners helped secure his bail."
+          "text": "He spent two years imprisoned there, initially in shackles, under commandant Nelson A. Miles. He was indicted for treason but never tried, partly because a trial risked testing the constitutionality of secession."
+        },
+        {
+          "label": "The hundred-thousand-dollar bond",
+          "text": "Horace Greeley, Gerrit Smith, Cornelius Vanderbilt, and other prominent men backed his 1867 bail. Greeley's participation angered many longtime Tribune readers and abolitionist allies."
         },
         {
           "label": "Virginia Clay correspondence",
@@ -66,29 +114,39 @@
         {
           "label": "Varina, Beauvoir, and his defense",
           "text": "His second wife Varina Howell survived him. At Beauvoir in Mississippi he wrote The Rise and Fall of the Confederate Government, presenting secession as constitutional and minimizing slavery's centrality."
+        },
+        {
+          "label": "Carter's 1978 resolution",
+          "text": "Jimmy Carter signed a congressional resolution restoring Davis's full rights of citizenship posthumously in 1978. IAC has paired that modern clue with the Camel Corps, Eggnog Riot, and bail bond."
         }
       ],
       "iacRoute": {
         "6": [
-          "Eggnog Riot",
-          "Sarah Knox Taylor and Brierfield",
-          "Camel Corps and military administration"
+          "Eggnog Riot and Black Hawk escort",
+          "Sarah Knox Taylor, Brierfield, and Virginia Clay",
+          "Camel Corps, Pacific Railroad Surveys, and Crimean observers",
+          "Dahlgren papers",
+          "Sarah Dorsey and Beauvoir"
         ],
         "5": [
+          "Mississippi Rifles at Buena Vista",
           "Petticoat capture rumor",
-          "Pierce cabinet",
-          "Toombs and Judah Benjamin"
+          "Pierce cabinet and Gadsden Purchase",
+          "Toombs, Mallory, and Judah Benjamin",
+          "Greeley-Vanderbilt bail bond"
         ],
         "4": [
           "Richmond White House",
           "only Confederate president",
-          "Fort Monroe imprisonment"
+          "Fort Monroe imprisonment",
+          "Alexander Stephens and Robert E. Lee",
+          "Irwinville capture"
         ]
       },
       "confusables": [
         {
           "term": "Jefferson Davis",
-          "distinction": "The Confederate president; do not confuse him with Union secretary of war Jefferson Columbus Davis."
+          "distinction": "The Confederate president; do not confuse him with Union general Jefferson Columbus Davis, who killed fellow Union general William Bull Nelson."
         },
         {
           "term": "Alexander Stephens",
@@ -97,6 +155,10 @@
         {
           "term": "Judah Benjamin",
           "distinction": "The cabinet member who successively served as attorney general, war secretary, and secretary of state."
+        },
+        {
+          "term": "Joseph E. Johnston",
+          "distinction": "The general who repeatedly clashed with Davis; Albert Sidney Johnston was the commander Davis personally admired."
         },
         {
           "term": "Zachary Taylor",
@@ -126,8 +188,16 @@
           "text": "He fought with this regiment and was wounded at Ball's Bluff, Antietam, and Chancellorsville. A famous but unverified story has him shouting at Abraham Lincoln to take cover at Fort Stevens."
         },
         {
+          "label": "Theodore Roosevelt friendship",
+          "text": "He knew Theodore Roosevelt from Boston reform circles and corresponded with him before the presidency. Roosevelt appointed him in 1902 but later felt betrayed when the justice dissented in Northern Securities."
+        },
+        {
           "label": "The Common Law, 1881",
           "text": "This book opens with the idea that the life of the law has been experience rather than logic. It made him an intellectual ancestor of legal realism."
+        },
+        {
+          "label": "The Path of the Law, 1897",
+          "text": "This lecture described law from the viewpoint of a bad man concerned with predicting what courts will actually do. It separated legal analysis from morality and became another foundational legal-realist text."
         },
         {
           "label": "Massachusetts bench",
@@ -150,6 +220,10 @@
           "text": "Later in 1919 he argued that truth should prevail through competition in the marketplace of ideas. Zechariah Chafee and Judge Learned Hand likely influenced his shift."
         },
         {
+          "label": "Gitlow dissent with Brandeis",
+          "text": "In Gitlow v. New York, the Court assumed speech protections applied to states but upheld a criminal-anarchy conviction. Holmes and Brandeis dissented because Benjamin Gitlow's manifesto posed no present danger."
+        },
+        {
           "label": "Baltzer dissent",
           "text": "The Court declined to publish his dissent from dismissal of Baltzer v. United States, which challenged punishment of German-American draft opponents. His secretary circulated it privately, and its defense of dissent anticipated the more famous Abrams opinion."
         },
@@ -170,8 +244,16 @@
           "text": "His opinion excluded illegally seized evidence and its derivatives, helping establish the principle later called fruit of the poisonous tree."
         },
         {
+          "label": "Olmstead dissent map",
+          "text": "The famous right-to-be-let-alone wiretap dissent in Olmstead belongs to Louis Brandeis, not Holmes. Holmes also dissented, calling the government's use of illegally obtained evidence dirty business."
+        },
+        {
           "label": "Buck v. Bell",
           "text": "He wrote the 1927 majority upholding Virginia's compulsory sterilization law and declared that three generations of imbeciles were enough. This is the central dark counterweight to his civil-liberties reputation."
+        },
+        {
+          "label": "Frankfurter and the secretaries",
+          "text": "Young lawyers including Felix Frankfurter served as his secretaries and helped transmit his influence into the next generation of American law. His correspondence with Harold Laski also became an important intellectual record."
         },
         {
           "label": "Retirement at ninety",
@@ -181,17 +263,23 @@
       "iacRoute": {
         "6": [
           "Baltzer and Zechariah Chafee",
-          "The Common Law",
-          "Abrams marketplace dissent"
+          "bad man in The Path of the Law",
+          "Twentieth Massachusetts wounds",
+          "Pennsylvania Coal and Missouri v. Holland",
+          "Silverthorne derivatives"
         ],
         "5": [
           "Herbert Spencer in Lochner",
-          "wartime speech cases",
-          "Great Dissenter"
+          "wartime speech trilogy",
+          "Abrams marketplace dissent",
+          "Northern Securities and Roosevelt",
+          "Buck v. Bell"
         ],
         "4": [
           "clear and present danger",
           "crowded-theater analogy",
+          "The Common Law",
+          "Great Dissenter",
           "Supreme Court justice"
         ]
       },
@@ -252,12 +340,20 @@
           "text": "A London jury refused to convict him and William Mead for unlawful preaching. The punishment of the jurors produced Bushel's Case, a landmark for jury independence."
         },
         {
+          "label": "William Mead and Bushel's Case",
+          "text": "Juror Edward Bushel refused to change the acquittal despite judicial pressure. The resulting 1670 decision established that jurors could not be punished merely for reaching an unwanted verdict."
+        },
+        {
           "label": "The Great Case of Liberty of Conscience",
           "text": "This tract argued that coercion in religion violated both Christianity and natural rights. Religious toleration was foundational to his colonial plan."
         },
         {
           "label": "Pennsylvania, 1681",
           "text": "He preferred New Wales or Sylvania, but Charles II named the province Pennsylvania in honor of the admiral. The proprietor feared observers would think he had named it for himself."
+        },
+        {
+          "label": "Delaware's lower counties",
+          "text": "The Duke of York transferred the lower counties on the Delaware to him in 1682, giving the province ocean access. They shared a governor with Pennsylvania but developed a separate assembly and eventually became Delaware."
         },
         {
           "label": "The Holy Experiment",
@@ -268,12 +364,24 @@
           "text": "The 1682 Frame of Government established an elected assembly and complex councils. The 1701 Charter of Privileges strengthened the assembly and provided broad religious liberty for monotheists."
         },
         {
+          "label": "Great Law of 1682",
+          "text": "The first assembly adopted a legal code that limited capital crimes and protected worship while retaining unequal political rules. It converted the Holy Experiment from a slogan into a functioning government."
+        },
+        {
           "label": "Philadelphia and Thomas Holme",
           "text": "Surveyor Thomas Holme translated the proprietor's plan into a grid between the Delaware and Schuylkill. Major streets were named for trees, and public squares punctuated the plan."
         },
         {
+          "label": "Penn's landing and first assembly",
+          "text": "He arrived aboard the Welcome in 1682 and called the first assembly at Chester, formerly Upland. Philadelphia was planned soon afterward as a green country town rather than an inherited medieval city."
+        },
+        {
           "label": "Tamanend and Shackamaxon",
           "text": "Tradition associates him with a peace agreement beneath an elm at Shackamaxon with Lenape leader Tamanend. No surviving written treaty proves the celebrated scene."
+        },
+        {
+          "label": "Mason-Dixon background",
+          "text": "His heirs repeatedly disputed Pennsylvania's southern boundary with the Calvert proprietors of Maryland. That conflict eventually produced the Mason-Dixon survey, although it occurred after his death."
         },
         {
           "label": "Walking Purchase correction",
@@ -290,19 +398,25 @@
       ],
       "iacRoute": {
         "6": [
+          "Truth Exalted and named religious orders",
           "Thomas Loe and Philip Ford",
           "Penn and Mead jury trial",
+          "The Sandy Foundation Shaken",
           "No Cross, No Crown"
         ],
         "5": [
-          "Charter of Privileges",
+          "Charter of Privileges and Great Law",
           "Thomas Holme and tree streets",
-          "Tamanend and Shackamaxon"
+          "Tamanend and Shackamaxon",
+          "Welcome and Chester assembly",
+          "lower counties on the Delaware"
         ],
         "4": [
           "Quaker proprietor",
           "Philadelphia",
-          "namesake colony on the Delaware"
+          "namesake colony on the Delaware",
+          "Charles II debt to his father",
+          "religious liberty"
         ]
       },
       "confusables": [
@@ -325,7 +439,7 @@
       ],
       "sources": [
         {
-          "label": "IAC: 2021 USHB national semifinal route and repeated direct preliminaries",
+          "label": "IAC: 2021 USHB regional semifinal direct answerline and repeated national preliminaries",
           "url": "https://www.iacompetitions.com/wp-content/uploads/2023/09/2020-2021-HS-US-History-Bee-Semifinals-B-Set.pdf"
         }
       ]
@@ -350,12 +464,20 @@
           "text": "The Committee of Five assigned him the first draft. Congress removed his long attack on the slave trade and revised other language before adopting the document."
         },
         {
+          "label": "Virginia Statute for Religious Freedom",
+          "text": "He drafted this measure in 1777, and James Madison secured its passage in 1786. It disestablished the Anglican Church and declared that civil rights should not depend on religious belief, one of the three achievements named on his epitaph."
+        },
+        {
           "label": "Virginia governor and Arnold's raid",
           "text": "While governor, he fled Richmond as Benedict Arnold's British force approached in 1781. Critics later used the episode to question his wartime leadership."
         },
         {
           "label": "Notes on the State of Virginia",
           "text": "Organized as responses to Francois Barbe-Marbois, this book covers geography, government, and natural history while exposing his racist assumptions and anxieties about slavery."
+        },
+        {
+          "label": "Buffon, the moose, and Megalonyx",
+          "text": "He rejected Georges-Louis Leclerc de Buffon's claim that American nature was degenerate and shipped him an enormous moose. Fossil claws led him to name Megalonyx, initially imagining a giant living lion before recognizing a ground sloth."
         },
         {
           "label": "Banneker and Gregoire",
@@ -366,12 +488,24 @@
           "text": "As minister to France he wrote the Head and Heart dialogue to Maria Cosway. Sally Hemings accompanied his household, and strong historical and genetic evidence identifies him as father of her children."
         },
         {
+          "label": "James Callender",
+          "text": "He secretly subsidized journalist James Thomson Callender's attacks on the Adams administration, then refused him a federal appointment. Callender retaliated by publicizing the president's relationship with Sally Hemings in 1802."
+        },
+        {
           "label": "Hamilton's rival",
           "text": "As Washington's secretary of state he opposed assumption, the national bank, and a pro-British foreign policy. His alliance with James Madison created the Democratic-Republican opposition."
         },
         {
+          "label": "Citizen Genet and resignation",
+          "text": "French envoy Edmond-Charles Genet tried to commission privateers and appeal directly to Americans despite Washington's neutrality. Jefferson defended France more than Hamilton did but ultimately joined the cabinet request for Genet's recall and resigned at the end of 1793."
+        },
+        {
           "label": "Kentucky Resolutions",
           "text": "After the Alien and Sedition Acts, he secretly drafted Kentucky's resolutions while Madison wrote Virginia's. Their compact reasoning later fed nullification arguments."
+        },
+        {
+          "label": "Mazzei letter",
+          "text": "In an unpublished 1796 letter to Philip Mazzei, he complained that an Anglican, monarchical, and aristocratic party had arisen around Washington. Federalist newspapers printed it, making it evidence of his break with the first president."
         },
         {
           "label": "Danbury Baptists",
@@ -390,8 +524,16 @@
           "text": "He purchased Louisiana despite doubts that the Constitution authorized acquiring territory. Meriwether Lewis and William Clark then explored the trans-Mississippi West."
         },
         {
+          "label": "Constitutional amendment abandoned",
+          "text": "He initially considered an amendment necessary to authorize the Louisiana Purchase, then abandoned that scruple when delay threatened the agreement. The contrast between strict construction and rapid acquisition is the point of this clue."
+        },
+        {
           "label": "Embargo",
           "text": "The 1807 ban on American overseas commerce attempted peaceful coercion after British and French violations. Smuggling and economic pain made it one of his presidency's greatest failures."
+        },
+        {
+          "label": "Chesapeake-Leopard aftermath",
+          "text": "After HMS Leopard attacked USS Chesapeake in 1807, he rejected immediate war and instead pursued economic coercion through the Embargo Act. Congress replaced it with the Non-Intercourse Act as he left office."
         },
         {
           "label": "Jefferson Bible",
@@ -408,22 +550,32 @@
         {
           "label": "Monticello, the university, and July Fourth",
           "text": "He designed Monticello and the University of Virginia's Academical Village and wanted both achievements, plus religious freedom, on his tomb. He died on July 4, 1826, the same day as John Adams."
+        },
+        {
+          "label": "Rotunda and Academical Village",
+          "text": "For the University of Virginia, he arranged faculty and students around the Lawn and modeled the Rotunda on the Roman Pantheon. The Rockfish Gap Commission supplied the institutional plan, while the architecture supplies a separate visual route."
         }
       ],
       "iacRoute": {
         "6": [
           "Gregoire and Banneker letters",
           "Head and Heart to Maria Cosway",
+          "Buffon moose and Megalonyx",
+          "Mazzei and William Short letters",
           "final Jubilee letter"
         ],
         "5": [
           "Danbury Baptists and wall of separation",
           "Kentucky Resolutions",
-          "Notes on Virginia"
+          "Notes on Virginia",
+          "James Callender",
+          "Virginia religious-freedom statute"
         ],
         "4": [
           "Declaration of Independence",
           "Louisiana Purchase",
+          "Revolution of 1800",
+          "Monticello and University of Virginia",
           "third president"
         ]
       },
@@ -476,12 +628,20 @@
           "text": "He negotiated with Pope Leo XIII over purchasing friar lands in the Philippines. The mission made church property and colonial administration useful early clues."
         },
         {
+          "label": "Taft-Katsura memorandum",
+          "text": "During a 1905 Asian trip, he discussed Korea and the Philippines with Japanese prime minister Katsura Taro. Their memorandum recorded parallel understandings rather than a formal secret treaty trading control of the two places."
+        },
+        {
           "label": "Secretary of war and Cuba",
           "text": "He succeeded Elihu Root in Roosevelt's cabinet, supervised Philippine and canal matters, and briefly served as provisional governor of Cuba after Tomas Estrada Palma's government collapsed."
         },
         {
           "label": "Roosevelt's chosen successor",
           "text": "Roosevelt promoted him for the 1908 Republican nomination. Their friendship broke when progressives concluded that the new administration had betrayed Roosevelt's program."
+        },
+        {
+          "label": "Election of 1908",
+          "text": "He defeated William Jennings Bryan with James S. Sherman as his running mate. His wife Helen Herron Taft, known as Nellie, strongly encouraged the presidential career he personally valued less than judicial service."
         },
         {
           "label": "Dollar Diplomacy",
@@ -502,6 +662,14 @@
         {
           "label": "More antitrust cases",
           "text": "His administration filed more antitrust suits than Roosevelt's, including actions against Standard Oil and American Tobacco. Yet Roosevelt criticized its case against U.S. Steel."
+        },
+        {
+          "label": "Mann-Elkins and postal banking",
+          "text": "The Mann-Elkins Act strengthened Interstate Commerce Commission authority over railroad and communications rates. His administration also established the Postal Savings System, giving small depositors a government-backed alternative to private banks."
+        },
+        {
+          "label": "Sixteenth Amendment and new states",
+          "text": "Congress proposed the federal income-tax amendment during his presidency, and it was ratified in 1913. New Mexico and Arizona entered the Union in 1912, completing the contiguous forty-eight states."
         },
         {
           "label": "The election of 1912",
@@ -526,23 +694,33 @@
         {
           "label": "Judges' Bill and Supreme Court building",
           "text": "He championed the Judiciary Act of 1925, which expanded discretionary certiorari, and pressed for a separate Supreme Court building. He died before the building opened."
+        },
+        {
+          "label": "Baseball and bathtub myth",
+          "text": "He began the presidential tradition of throwing a ceremonial first pitch in 1910. The familiar story that he became stuck in a White House bathtub is unsupported and should be treated as caricature, not a reliable biographical fact."
         }
       ],
       "iacRoute": {
         "6": [
           "Provisional governor after Estrada Palma",
           "Vatican friar-land mission",
-          "Benjamin Harrison solicitor general"
+          "Taft-Katsura memorandum",
+          "Carl Panzram's stolen gun",
+          "Archibald Butt"
         ],
         "5": [
           "Philippine civil governor",
           "Elihu Root succession",
-          "McReynolds, Holmes, Brandeis, and Van Devanter bench"
+          "Ballinger, Glavis, and Pinchot",
+          "Philander Knox and Dollar Diplomacy",
+          "Judges' Bill of 1925"
         ],
         "4": [
           "Twenty-seventh president",
           "chief justice",
-          "only person to lead presidency and Court"
+          "only person to lead presidency and Court",
+          "Roosevelt split in 1912",
+          "Payne-Aldrich Tariff"
         ]
       },
       "confusables": [
@@ -594,6 +772,10 @@
           "text": "After demanding a field command, he led the nighttime bayonet assault on British Redoubt Number Ten. French troops simultaneously captured Number Nine."
         },
         {
+          "label": "Newburgh and Continentalist essays",
+          "text": "After Yorktown he represented New York in the Confederation Congress and wrote Continentalist essays calling for stronger national taxing power. During the Newburgh crisis, he communicated with dissatisfied officers while Washington ultimately defused the confrontation."
+        },
+        {
           "label": "Eliza Schuyler",
           "text": "His marriage joined him to Philip Schuyler's powerful New York family. Eliza later preserved his papers and helped establish the Orphan Asylum Society."
         },
@@ -602,8 +784,20 @@
           "text": "He answered loyalist Samuel Seabury's Letters of a Westchester Farmer with A Full Vindication and The Farmer Refuted. These youthful writings opened IAC's 2018 playoff question."
         },
         {
+          "label": "Annapolis Convention",
+          "text": "He attended the poorly subscribed 1786 meeting on interstate commerce and helped James Madison draft its call for a broader convention at Philadelphia. That recommendation became the immediate institutional bridge to the Constitutional Convention."
+        },
+        {
           "label": "Constitution and Publius",
           "text": "At Philadelphia he advocated an extremely strong executive and Senate. He then wrote most of the Federalist essays alongside James Madison and John Jay."
+        },
+        {
+          "label": "Federalist authorship map",
+          "text": "He wrote fifty-one of the eighty-five Federalist essays; Madison wrote twenty-nine and Jay five. Hamilton handled many institutional and executive topics, including the energetic executive in Federalist No. 70."
+        },
+        {
+          "label": "New York ratification",
+          "text": "At the Poughkeepsie convention, he debated Anti-Federalists led by Governor George Clinton and Melancton Smith. New York ratified narrowly after recommending amendments and reserving confidence in the new union."
         },
         {
           "label": "Public credit and assumption",
@@ -622,12 +816,24 @@
           "text": "His Report on Manufactures promoted industrial development, while his department created customs administration and the Revenue Cutter Service, an ancestor of the Coast Guard."
         },
         {
+          "label": "Whiskey tax and rebellion",
+          "text": "His excise on distilled spirits fell heavily on western producers and helped provoke the Whiskey Rebellion. He accompanied Washington's militia mobilization in 1794, demonstrating the enforcement power of the financial state he had designed."
+        },
+        {
           "label": "Paterson and the useful-manufactures society",
           "text": "He helped found the Society for Establishing Useful Manufactures, which planned the industrial city of Paterson around the Passaic Falls. Treasury aide Tench Coxe contributed research and drafting to his reports before later changing parties."
         },
         {
           "label": "Reynolds Pamphlet",
           "text": "To rebut corruption charges involving James Reynolds, he publicly admitted an affair with Maria Reynolds. The confession protected his financial reputation while destroying his family and political standing."
+        },
+        {
+          "label": "Clingman and Monroe",
+          "text": "James Monroe, Frederick Muhlenberg, and Abraham Venable confronted him with accusations carried by James Reynolds and Jacob Clingman. Hamilton showed them evidence of the affair, then later blamed Monroe when the story became public."
+        },
+        {
+          "label": "Camillus and Jay's Treaty",
+          "text": "Under the name Camillus, he wrote an extended defense of Jay's Treaty against attacks from Jeffersonian Republicans. The essays linked his constitutional argument for executive treaty power to a strongly pro-British commercial policy."
         },
         {
           "label": "The New-York Evening Post",
@@ -638,25 +844,39 @@
           "text": "During the undeclared naval conflict with France, Washington became nominal commander of a provisional army and insisted on him as the active second-in-command. Adams distrusted the resulting military buildup and his ambitions, deepening their fatal Federalist split."
         },
         {
+          "label": "The 1800 Adams pamphlet",
+          "text": "He privately circulated a sweeping attack on John Adams's character and conduct, but Aaron Burr's allies obtained and published it. The episode split Federalists during the election and helped destroy Hamilton's remaining party leadership."
+        },
+        {
+          "label": "Philip Hamilton and the Eacker duel",
+          "text": "His eldest son Philip died after a duel with George Eacker in 1801, using pistols later associated with the father's duel. Eliza was pregnant with a second son whom the family also named Philip."
+        },
+        {
           "label": "Adams, Burr, and Weehawken",
-          "text": "He attacked John Adams in a private pamphlet that became public, then helped Jefferson defeat Burr in 1801. Burr fatally wounded him in an 1804 duel at Weehawken."
+          "text": "He helped Jefferson defeat Burr in the House contest of 1801 and opposed Burr's 1804 New York gubernatorial bid. After Charles D. Cooper publicized a supposedly despicable opinion, Burr demanded satisfaction and fatally wounded him at Weehawken."
         }
       ],
       "iacRoute": {
         "6": [
           "grave and phlegmatic pamphlet voice",
           "Letters of a Westchester Farmer",
-          "A Full Vindication"
+          "Tench Coxe and Paterson",
+          "Camillus essays",
+          "Newburgh correspondence"
         ],
         "5": [
           "Samuel Seabury and The Farmer Refuted",
-          "Tench Coxe and Paterson",
-          "Revenue Cutter and reports"
+          "A Full Vindication",
+          "Revenue Cutter and reports",
+          "Poughkeepsie ratification",
+          "Reynolds and Clingman"
         ],
         "4": [
           "Federalist Papers",
           "first treasury secretary",
-          "national bank and public credit"
+          "national bank and public credit",
+          "Compromise of 1790",
+          "Burr duel"
         ]
       },
       "confusables": [
@@ -700,8 +920,16 @@
           "text": "He edited a campaign paper supporting William Henry Harrison in 1840, then founded the New-York Tribune in 1841 with Thomas McElrath."
         },
         {
+          "label": "The New-Yorker and the Jeffersonian",
+          "text": "Before the Tribune, he edited a literary weekly called The New-Yorker, unrelated to the modern magazine. Thurlow Weed then recruited him to edit the Jeffersonian and Log Cabin for New York Whigs."
+        },
+        {
           "label": "Margaret Fuller and Whitelaw Reid",
           "text": "Fuller became the Tribune's literary editor and one of its most important critics. Whitelaw Reid later managed the paper and became a national Republican figure."
+        },
+        {
+          "label": "Charles Dana and Karl Marx",
+          "text": "Charles A. Dana served as managing editor before entering Lincoln's War Department, while Karl Marx supplied European correspondence. Those names identify the Tribune's unusually broad reform and international network."
         },
         {
           "label": "Associationism",
@@ -724,8 +952,16 @@
           "text": "He wrote that he defied, execrated, and spat upon the Whig platform supporting the Compromise of 1850. The quotation appeared in IAC's national playoff route."
         },
         {
+          "label": "Republican rise and Seward's defeat",
+          "text": "The Tribune helped move antislavery Whigs into the Republican Party. At the 1860 convention, he worked against Seward's nomination, initially favored Edward Bates, and helped clear the path for Abraham Lincoln."
+        },
+        {
           "label": "A brief House term",
           "text": "After David S. Jackson lost his seat for election fraud, this editor served the final months of the term in 1848-49. He used the position to attack congressional mileage abuses."
+        },
+        {
+          "label": "On to Richmond",
+          "text": "Early in the Civil War, the Tribune pressed for an immediate Union advance with the slogan Forward to Richmond. After the First Bull Run disaster, the same editor briefly became deeply pessimistic about continuing the war."
         },
         {
           "label": "Prayer of Twenty Millions",
@@ -740,25 +976,39 @@
           "text": "He signed the former Confederate president's 1867 bail bond with other prominent men. Many longtime readers and Union supporters denounced him for the gesture."
         },
         {
+          "label": "What I Know of Farming",
+          "text": "His 1871 book collected practical and sometimes eccentric agricultural advice despite his career as an urban editor. The title offers a work clue separate from his newspaper and famous westward slogan."
+        },
+        {
           "label": "Liberal Republican defeat",
-          "text": "In 1872 he ran against Grant with B. Gratz Brown and Democratic endorsement. After his wife died and he suffered a breakdown, he died before electoral votes were counted; votes cast for him were rejected."
+          "text": "In 1872 he ran against Grant with B. Gratz Brown and Democratic endorsement. His wife Mary Cheney Greeley died shortly before the election; he then suffered a breakdown and died before the Electoral College met."
+        },
+        {
+          "label": "Rejected electoral votes",
+          "text": "Because he died after the popular vote, electors pledged to him scattered among several alternatives. Congress rejected three Georgia votes still cast for the dead candidate, while most former Greeley electors supported Thomas Hendricks, Benjamin Gratz Brown, or others."
         }
       ],
       "iacRoute": {
         "6": [
           "David S. Jackson special election",
           "1852 platform denunciation",
-          "Georgia electoral votes rejected"
+          "Georgia electoral votes rejected",
+          "The New-Yorker and Thomas McElrath",
+          "Karl Marx and Charles Dana"
         ],
         "5": [
           "Whitelaw Reid and Margaret Fuller",
           "Prayer of Twenty Millions",
+          "Seward-Weed split",
+          "Niagara peace mission",
           "Liberal Republican candidacy"
         ],
         "4": [
           "New-York Tribune",
           "Go West, young man",
-          "death after losing in 1872"
+          "1872 opponent of Grant",
+          "Jefferson Davis bail",
+          "death before electoral votes"
         ]
       },
       "confusables": [
@@ -798,6 +1048,10 @@
           "text": "He grew up in a financially strained Quaker family that operated a grocery and service station in Whittier. A scholarship took him to Duke Law School."
         },
         {
+          "label": "Navy and South Pacific",
+          "text": "He served as a Navy supply officer during World War II rather than as a combat pilot. Poker winnings helped finance his first congressional campaign, a useful correction to assumptions created by his later Cold War image."
+        },
+        {
           "label": "Voorhis and the Pink Lady",
           "text": "He defeated congressman Jerry Voorhis in 1946 by stressing communist-linked support, then attacked Helen Gahagan Douglas as the Pink Lady in the 1950 Senate race."
         },
@@ -808,6 +1062,14 @@
         {
           "label": "Checkers speech",
           "text": "Accused in 1952 of benefiting from a private political fund, he defended his finances on television and said his daughters would keep a gifted dog named Checkers. Eisenhower retained him on the ticket."
+        },
+        {
+          "label": "Eisenhower illnesses",
+          "text": "As vice president he chaired cabinet and National Security Council meetings during Eisenhower's illnesses, but no constitutional transfer of power occurred. Their private disability agreement anticipated the later Twenty-Fifth Amendment."
+        },
+        {
+          "label": "Caracas attack",
+          "text": "During a 1958 South American tour, hostile crowds attacked his motorcade in Caracas, Venezuela. The confrontation became one of the episodes later organized in his memoir Six Crises."
         },
         {
           "label": "Kitchen Debate",
@@ -826,6 +1088,14 @@
           "text": "His 1968 campaign appealed to voters alienated by civil-rights unrest and Democratic change. He chose Maryland governor Spiro Agnew as his running mate."
         },
         {
+          "label": "Chennault affair",
+          "text": "Campaign intermediary Anna Chennault urged South Vietnamese officials to resist Johnson administration peace talks in 1968, suggesting they would receive better terms after the election. Nixon denied involvement, and the episode remained hidden from voters."
+        },
+        {
+          "label": "Silent Majority",
+          "text": "In a November 1969 television address, he asked the great silent majority to support his Vietnam policy against increasingly visible protests. The phrase became shorthand for his appeal to voters who felt culturally and politically displaced."
+        },
+        {
           "label": "China opening",
           "text": "Secret diplomacy by Henry Kissinger prepared his 1972 visit to Mao Zedong and Zhou Enlai. The Shanghai Communique acknowledged competing positions over Taiwan."
         },
@@ -842,6 +1112,14 @@
           "text": "His administration created the Environmental Protection Agency, signed OSHA and major environmental laws, imposed wage-price controls, and ended dollar convertibility into gold in the Nixon Shock."
         },
         {
+          "label": "Philadelphia Plan and New Federalism",
+          "text": "His Labor Department enforced affirmative-action goals on federal construction through the Philadelphia Plan. Revenue sharing and block grants formed his New Federalism, while his more ambitious Family Assistance Plan failed in Congress."
+        },
+        {
+          "label": "Enemies list and Plumbers",
+          "text": "The White House used an enemies list against political opponents and formed the Plumbers after the Pentagon Papers leak. Operatives later burglarized Daniel Ellsberg's psychiatrist's office, linking secrecy abuses directly to the Watergate culture."
+        },
+        {
           "label": "Six Crises",
           "text": "His 1962 memoir treated the Hiss case, the fund controversy and Checkers speech, Eisenhower's illnesses, the attack on him in Caracas, the Kitchen Debate, and the 1960 campaign as six tests of character."
         },
@@ -854,23 +1132,41 @@
           "text": "Bob Woodward and Carl Bernstein reconstructed the administration's collapse in this 1976 book. It follows All the President's Men, which concentrates on their reporting from the break-in through the 1972 election."
         },
         {
-          "label": "Watergate and resignation",
-          "text": "The break-in, cover-up, White House tapes, Saturday Night Massacre, and United States v. Nixon destroyed his presidency. He resigned on August 9, 1974, and Gerald Ford later pardoned him."
+          "label": "Butterfield and the tapes",
+          "text": "Deputy assistant Alexander Butterfield revealed the taping system during the Senate Watergate hearings. John Dean's testimony, the missing eighteen-and-a-half minutes, and the later smoking-gun tape turned the cover-up into direct presidential evidence."
+        },
+        {
+          "label": "Saturday Night Massacre",
+          "text": "He ordered Attorney General Elliot Richardson to fire special prosecutor Archibald Cox; Richardson and deputy William Ruckelshaus resigned, while Solicitor General Robert Bork carried out the dismissal. The crisis sharply increased support for impeachment."
+        },
+        {
+          "label": "United States v. Nixon and resignation",
+          "text": "The Supreme Court unanimously rejected an absolute executive-privilege claim and ordered release of the tapes. Facing articles of impeachment, he resigned on August 9, 1974; Gerald Ford later granted a full pardon."
+        },
+        {
+          "label": "Frost interviews and rehabilitation",
+          "text": "In 1977 interviews with David Frost, he defended presidential power before offering a qualified apology for betraying the country. He later rebuilt a partial reputation as a foreign-policy writer and adviser without escaping Watergate."
         }
       ],
       "iacRoute": {
         "6": [
           "Nixon Agonistes and carpet-beating scene",
           "Six Crises",
+          "Chennault affair",
+          "Caracas motorcade",
           "Imperial Presidency"
         ],
         "5": [
           "The Final Days",
           "Woodward and Bernstein",
-          "televised debate details"
+          "televised debate details",
+          "Ellsberg psychiatrist burglary",
+          "Butterfield and the taping system"
         ],
         "4": [
           "Watergate",
+          "Checkers and Kitchen Debate",
+          "China opening",
           "thirty-seventh president",
           "resignation and Ford pardon"
         ]
@@ -940,6 +1236,10 @@
           "text": "John Steuart Curry's Kansas State Capitol mural places him at the center holding a rifle and a Bible before a tornado and prairie fire. The image has already anchored an IAC question."
         },
         {
+          "label": "Missouri liberation raid",
+          "text": "In December 1858 he led enslaved people out of Missouri, killed one slaveholder, and escorted the group through Iowa to Canada. The operation demonstrated the mobile liberation strategy he hoped to expand from Harpers Ferry."
+        },
+        {
           "label": "The Secret Six",
           "text": "Thomas Wentworth Higginson, Theodore Parker, Samuel Gridley Howe, Franklin Sanborn, George Luther Stearns, and Gerrit Smith supplied varying degrees of support for his plans."
         },
@@ -948,12 +1248,28 @@
           "text": "At Chatham, Canada West, in 1858, his supporters adopted a provisional constitution for a revolutionary antislavery government. Black activist Martin Delany participated."
         },
         {
+          "label": "Hugh Forbes and the pikes",
+          "text": "British veteran Hugh Forbes was hired to train the force but exposed the plan after a pay dispute. Connecticut blacksmith Charles Blair manufactured the pikes intended for people who joined the uprising without firearms."
+        },
+        {
+          "label": "Douglass and Tubman",
+          "text": "Frederick Douglass met him at Chambersburg and refused to join what he considered a suicidal attack on a federal arsenal. Brown called Harriet Tubman General Tubman and sought her support, but illness kept her from participating."
+        },
+        {
           "label": "Harpers Ferry",
           "text": "In October 1859 he seized the federal armory hoping enslaved people would join an expanding liberation movement. He took Lewis Washington hostage but became trapped in the engine house."
         },
         {
+          "label": "Lewis Washington's relics",
+          "text": "The raiders seized George Washington's great-grandnephew Lewis Washington along with a sword presented by Frederick the Great and pistols associated with Lafayette. Those objects create unusually specific opening clues."
+        },
+        {
           "label": "Kagi, Newby, Oliver, and Watson",
           "text": "John Henry Kagi and Dangerfield Newby died in the raid, as did his sons Oliver and Watson. Remembering the small raider network distinguishes deep clues from the generic event."
+        },
+        {
+          "label": "Heyward Shepherd",
+          "text": "Free Black railroad baggage master Heyward Shepherd became the raid's first fatality when shot by Brown's men. His death complicated later claims about whom the raid represented and inspired a controversial memorial at Harpers Ferry."
         },
         {
           "label": "Lee, Stuart, and Israel Greene",
@@ -972,25 +1288,39 @@
           "text": "Victor Hugo compared Virginia's execution to Washington killing Spartacus, while Lydia Maria Child publicly defended the prisoner and offered nursing aid. Their interventions helped transform a defeated raider into an international martyr."
         },
         {
-          "label": "Trial, final note, and martyrdom",
-          "text": "Virginia convicted him of treason, murder, and inciting slave revolt. Before his December 2 execution he predicted that slavery's crimes would be purged only with blood."
+          "label": "Execution witnesses",
+          "text": "Thomas J. Jackson brought VMI cadets to guard the execution, and actor John Wilkes Booth attended in a militia uniform. The future Stonewall Jackson and Lincoln assassin form a memorable 1859 convergence."
+        },
+        {
+          "label": "Trial, speech, and final note",
+          "text": "Virginia convicted him of treason, murder, and inciting slave revolt. His courtroom speech accepted death for acting on behalf of the enslaved; a separate note on execution day predicted that slavery's crimes would be purged only with blood."
+        },
+        {
+          "label": "John Brown's Body",
+          "text": "Union soldiers transformed the name into a marching song, and Julia Ward Howe wrote Battle Hymn of the Republic to its tune. Keep the historical person separate from the song title when IAC asks for a work."
         }
       ],
       "iacRoute": {
         "6": [
           "Silas Soule and Whitman poem",
           "Kagi, Newby, Oliver, and Watson",
+          "Lewis Washington's sword and pistols",
+          "Hugh Forbes and Charles Blair pikes",
           "Secret Six and Victor Hugo"
         ],
         "5": [
           "Pottawatomie",
           "Battle of Black Jack",
-          "Chatham constitution"
+          "Chatham constitution",
+          "Missouri liberation raid",
+          "Tragic Prelude"
         ],
         "4": [
           "Harpers Ferry armory",
+          "Lee and J. E. B. Stuart",
           "militant abolitionist",
-          "execution in 1859"
+          "execution in 1859",
+          "John Brown's Body"
         ]
       },
       "confusables": [
@@ -1013,7 +1343,7 @@
       ],
       "sources": [
         {
-          "label": "IAC: 2021 USHB national semifinal route and repeated direct preliminaries",
+          "label": "IAC: 2021 USHB regional semifinal direct answerline and repeated national preliminaries",
           "url": "https://www.iacompetitions.com/wp-content/uploads/2023/09/2020-2021-HS-US-History-Bee-Semifinals-B-Set.pdf"
         }
       ]
@@ -1035,15 +1365,19 @@
         },
         {
           "label": "Governor of New York",
-          "text": "Elected in 1906, he strengthened public-service regulation, fought racetrack gambling, and resisted Republican machine control. Theodore Roosevelt supported him despite policy tensions."
+          "text": "Elected over newspaper publisher William Randolph Hearst in 1906, he strengthened public-service regulation, fought racetrack gambling, and resisted Republican machine control. Theodore Roosevelt supported him despite policy tensions."
         },
         {
           "label": "First Supreme Court service",
           "text": "William Howard Taft appointed him associate justice in 1910. He resigned in 1916 to accept the Republican presidential nomination."
         },
         {
+          "label": "First-term opinions",
+          "text": "Before resigning, he joined the Court's rejection of peonage in Bailey v. Alabama and wrote the Shreveport Rate Cases opinion allowing federal regulation of intrastate rail rates that burdened interstate commerce."
+        },
+        {
           "label": "The 1916 near victory",
-          "text": "He lost to Woodrow Wilson by only twenty-three electoral votes. A famous story blamed his failure to greet California governor Hiram Johnson, though the defeat had broader causes."
+          "text": "Running with Charles W. Fairbanks, he lost to Woodrow Wilson by only twenty-three electoral votes. California's thirteen votes would have reversed the outcome; a famous story blamed his failure to greet Governor Hiram Johnson, though the defeat had broader causes."
         },
         {
           "label": "Secretary of state",
@@ -1052,6 +1386,10 @@
         {
           "label": "Washington Naval Conference",
           "text": "He opened the 1921 conference by proposing large-scale scrapping of capital ships. His proposal led into the Four-Power, Five-Power, and Nine-Power treaties."
+        },
+        {
+          "label": "Hughes-Peynado plan",
+          "text": "His State Department worked with Dominican diplomat Francisco Peynado on a 1922 agreement establishing steps toward elections and the end of the U.S. occupation. The resulting plan is a difficult Caribbean-diplomacy route."
         },
         {
           "label": "World Court and private practice",
@@ -1066,6 +1404,10 @@
           "text": "He wrote the 1931 majority applying freedom of the press against state prior restraints. This liberal ruling complicates any simple description of him as conservative."
         },
         {
+          "label": "Norris v. Alabama",
+          "text": "He wrote the 1935 decision overturning a Scottsboro defendant's conviction because Alabama had systematically excluded Black citizens from juries. The case links him to the Scottsboro Boys without making him their trial lawyer."
+        },
+        {
           "label": "Schechter Poultry",
           "text": "His unanimous opinion invalidated the National Industrial Recovery Act's code system for excessive delegation and effects outside interstate commerce."
         },
@@ -1078,8 +1420,12 @@
           "text": "In Home Building & Loan v. Blaisdell, he upheld Minnesota's temporary mortgage moratorium despite the Contract Clause. The opinion argued that constitutional restraints must be read in light of genuine emergencies."
         },
         {
+          "label": "West Coast Hotel",
+          "text": "His 1937 majority upheld Washington's minimum wage for women and abandoned the Lochner-era treatment of liberty of contract. Owen Roberts supplied the pivotal vote in the switch in time, while Hughes wrote the opinion."
+        },
+        {
           "label": "Court-packing and the 1937 shift",
-          "text": "He rebutted Roosevelt's claim that the Court was behind on work in a letter to Burton Wheeler. He then led majorities sustaining labor and Social Security laws after the constitutional shift."
+          "text": "He rebutted Roosevelt's claim that the Court was behind on work in a letter to Burton Wheeler, drawing supporting information from Justice Louis Brandeis. He then led majorities sustaining labor and Social Security laws after the constitutional shift."
         },
         {
           "label": "Jones & Laughlin and Social Security",
@@ -1089,18 +1435,24 @@
       "iacRoute": {
         "6": [
           "son's solicitor-general resignation",
-          "Near v. Minnesota",
-          "insurance investigation"
+          "Armstrong insurance investigation",
+          "Hughes-Peynado plan",
+          "Shreveport Rate Cases",
+          "Norris v. Alabama"
         ],
         "5": [
+          "Near v. Minnesota",
           "Schechter Poultry",
           "Hughes and Roberts between Court blocs",
-          "Washington Conference"
+          "Washington Conference",
+          "Blaisdell emergency reasoning"
         ],
         "4": [
           "1916 nominee",
           "Harding secretary of state",
-          "chief justice through the 1930s"
+          "chief justice through the 1930s",
+          "court-packing fight",
+          "Jones & Laughlin and Social Security"
         ]
       },
       "confusables": [
@@ -1140,8 +1492,16 @@
           "text": "As a child he watched smoke from the Battle of Bunker Hill with his mother Abigail. His childhood letters reveal the pressure of growing up in a revolutionary political family."
         },
         {
+          "label": "The diary",
+          "text": "He kept an enormous diary from youth until shortly before his death, recording diplomacy, politics, exercise, family conflict, and his own moral failures. It is one of the richest continuous personal records in American political history."
+        },
+        {
           "label": "Francis Dana and Russia",
           "text": "As a teenager he served as secretary and interpreter for diplomat Francis Dana's mission to Catherine the Great's Russia. He later studied at Leiden and graduated from Harvard."
+        },
+        {
+          "label": "Netherlands and Prussia",
+          "text": "Washington appointed him minister to the Netherlands, and his father later sent him to Prussia. He negotiated a Prussian commercial treaty before returning to the United States."
         },
         {
           "label": "Louisa Catherine Johnson",
@@ -1164,12 +1524,24 @@
           "text": "He negotiated the Adams-Onis Treaty, helped formulate the Monroe Doctrine, and supported the Convention of 1818 and Rush-Bagot limitations with Britain."
         },
         {
+          "label": "Adams-Onis details",
+          "text": "The 1819 treaty acquired Florida, fixed a transcontinental boundary to the Pacific, and had the United States renounce claims to Texas. Spanish minister Luis de Onis was his negotiating counterpart."
+        },
+        {
+          "label": "Canning and the Monroe Doctrine",
+          "text": "He opposed issuing a joint declaration with British foreign secretary George Canning, arguing that America should not come in as a cockboat in the wake of a British man-of-war. His advice helped produce Monroe's unilateral 1823 doctrine."
+        },
+        {
           "label": "The corrupt bargain",
           "text": "After no candidate won an electoral majority in 1824, the House selected him over Andrew Jackson. His appointment of Henry Clay as secretary of state generated the enduring accusation."
         },
         {
           "label": "Lighthouses of the skies",
           "text": "His ambitious national program included roads, canals, scientific exploration, a national university, and an astronomical observatory. Opponents mocked the observatory phrase."
+        },
+        {
+          "label": "C and O Canal groundbreaking",
+          "text": "He endorsed national roads, canals, and scientific development but faced a hostile Jacksonian Congress. On July 4, 1828, he dug the first earth for the Chesapeake and Ohio Canal while Charles Carroll separately laid the Baltimore and Ohio Railroad's first stone."
         },
         {
           "label": "The pool table",
@@ -1188,6 +1560,10 @@
           "text": "Returning to the House in 1831, he fought the gag rule that automatically tabled antislavery petitions. Congress finally repealed it in 1844."
         },
         {
+          "label": "Petitions and the gag rule",
+          "text": "He repeatedly forced antislavery petitions onto the House agenda, sometimes provoking days of procedural combat. Opponents attempted to censure him after he presented a petition from enslaved people, but he turned the proceeding against them."
+        },
+        {
           "label": "The Amistad argument",
           "text": "He argued before the Supreme Court for the freedom of the African captives in 1841. His lengthy presentation invoked natural rights and the Declaration."
         },
@@ -1196,23 +1572,33 @@
           "text": "His troubled eldest son disappeared from the steamship Benjamin Franklin in 1829 and was presumed to have died by suicide. IAC has used the ship and disappearance as an early presidential-biography clue."
         },
         {
-          "label": "Smithsonian and final collapse",
-          "text": "He helped direct James Smithson's bequest toward a national scientific institution. In 1848 he collapsed in the House after opposing honors for Mexican War officers and died in the Speaker's Room."
+          "label": "Smithsonian",
+          "text": "He chaired the House committee that directed James Smithson's bequest toward a national scientific institution and served on the Smithsonian's first Board of Regents. The role joined his congressional career to his lifelong support for science."
+        },
+        {
+          "label": "Mexican War opposition and final collapse",
+          "text": "He denounced annexation and the Mexican-American War as extensions of slave power. In 1848 he collapsed in the House after voting against honors for Mexican War officers and died in the Speaker's Room after saying this is the last of Earth."
         }
       ],
       "iacRoute": {
         "6": [
-          "acutest enemy of slavery quotation",
+          "George Washington Adams and the Benjamin Franklin",
+          "David Porter at Fajardo",
+          "cockboat and Canning",
           "collapse over Mexican War honors",
           "James Smithson's bequest"
         ],
         "5": [
-          "first minister to Russia",
+          "Francis Dana and first minister to Russia",
+          "Adams-Onis boundary",
           "post-presidential House career",
+          "gag-rule petitions",
           "Amistad argument"
         ],
         "4": [
           "corrupt bargain with Clay",
+          "Monroe Doctrine",
+          "Old Man Eloquent",
           "sixth president",
           "son of the second president"
         ]
@@ -1258,12 +1644,16 @@
           "text": "He graduated in 1818, studied law under Felix Grundy, and entered Tennessee politics as an ally of Andrew Jackson."
         },
         {
+          "label": "Sarah Childress Polk",
+          "text": "He married the well-educated Sarah Childress in 1824. She served as his political partner and White House hostess, enforced a restrained Presbyterian social style, and survived him by more than forty years."
+        },
+        {
           "label": "Young Hickory",
           "text": "This nickname advertised him as Jackson's disciplined protege. Unlike Jackson, he was an exacting administrator who closely supervised cabinet departments."
         },
         {
           "label": "Speaker of the House",
-          "text": "He served from 1835 to 1839 and remains the only House speaker to become president. He defended Jacksonian policies during the Bank and slavery-petition conflicts."
+          "text": "He defeated fellow Tennessean John Bell for the speakership and served from 1835 to 1839, remaining the only House speaker to become president. He defended Jacksonian policies during the Bank and slavery-petition conflicts."
         },
         {
           "label": "Tennessee defeats",
@@ -1278,8 +1668,16 @@
           "text": "Whigs used the question to mock his obscurity. He ran with George M. Dallas against Henry Clay while linking Texas annexation to claims in Oregon."
         },
         {
+          "label": "Texas annexation handoff",
+          "text": "Congress approved annexation by joint resolution in Tyler's final days. Polk allowed Tyler to send the offer immediately rather than withdraw it, so Texas entered the Union during Polk's first year even though the decisive resolution preceded him."
+        },
+        {
           "label": "Four major goals",
           "text": "He sought a lower tariff, restoration of the independent treasury, settlement of the Oregon boundary, and acquisition of California. By one term's end he had achieved all four."
+        },
+        {
+          "label": "Cabinet map",
+          "text": "James Buchanan served as secretary of state, Robert J. Walker at Treasury, George Bancroft at Navy, William L. Marcy at War, Cave Johnson as postmaster general, and John Y. Mason as attorney general. Those names divide his territorial, fiscal, and military clue routes."
         },
         {
           "label": "Walker Tariff and Independent Treasury",
@@ -1298,6 +1696,14 @@
           "text": "The Thornton clash allowed him to claim that American blood had been shed on American soil. Abraham Lincoln demanded the exact spot, challenging the war's justification."
         },
         {
+          "label": "Taylor, Scott, and Mexico City",
+          "text": "After Taylor's victories produced a potential Whig rival, the administration transferred many experienced troops to Winfield Scott. Scott's Veracruz-to-Mexico City campaign finally compelled negotiations."
+        },
+        {
+          "label": "Wilmot Proviso",
+          "text": "David Wilmot repeatedly attached a slavery ban to appropriations for territory acquired from Mexico. It never became law, but it exposed the sectional consequences of the expansion Polk had achieved."
+        },
+        {
           "label": "Trist and Guadalupe Hidalgo",
           "text": "He recalled diplomat Nicholas Trist, but Trist ignored the order and completed the 1848 treaty. Mexico ceded vast western territory for fifteen million dollars."
         },
@@ -1310,6 +1716,10 @@
           "text": "Alabama senator Dixon Hall Lewis managed the Independent Treasury measure in the Senate and was a close administration ally. That less familiar name can identify the president through his domestic program."
         },
         {
+          "label": "Gold in California",
+          "text": "Near the end of 1848, he confirmed reports of California gold in his annual message and displayed evidence sent to Washington. The rush transformed territory acquired by his war just as his presidency ended."
+        },
+        {
           "label": "One term and 103 days",
           "text": "He honored his pledge not to seek reelection and died of cholera only 103 days after leaving office, the shortest retirement of any president."
         }
@@ -1318,16 +1728,22 @@
         "6": [
           "Dixon Lewis and treasury policy",
           "river-and-harbor veto",
-          "McDowell surgery"
+          "McDowell surgery",
+          "Sarah Childress",
+          "James K. Jones defeats"
         ],
         "5": [
           "Spot Resolutions",
           "dark-horse ninth ballot",
-          "Walker Tariff and Independent Treasury"
+          "Walker Tariff and Independent Treasury",
+          "Slidell mission",
+          "cabinet map"
         ],
         "4": [
           "Mexican-American War",
           "Oregon settlement",
+          "Texas annexation",
+          "four stated goals",
           "eleventh president"
         ]
       },
@@ -1372,6 +1788,10 @@
           "text": "She followed minister John Cotton to Massachusetts in 1634. Her household's status and her work as a midwife gave her unusual access across the community."
         },
         {
+          "label": "William Hutchinson and fifteen children",
+          "text": "She married cloth merchant William Hutchinson and bore fifteen children. The family followed Cotton from England, and its wealth helped turn her home meetings into a colony-wide political problem."
+        },
+        {
           "label": "Meetings for women and men",
           "text": "She began by discussing sermons with women, then attracted mixed gatherings that could include dozens of listeners. Authorities feared an alternative center of religious influence."
         },
@@ -1390,6 +1810,14 @@
         {
           "label": "Antinomian or Free Grace Controversy",
           "text": "Opponents called her followers antinomians, implying that inward grace freed them from moral law. Supporters preferred free grace and rejected the accusation."
+        },
+        {
+          "label": "The 1637 election and disarming",
+          "text": "At the contentious Newtown election, John Winthrop defeated Henry Vane and returned as governor. Authorities later disarmed or disfranchised many Hutchinson supporters, turning theology into a struggle over political control."
+        },
+        {
+          "label": "Newtown synod",
+          "text": "A 1637 gathering of ministers condemned more than eighty supposed theological errors associated with the free-grace faction. The synod isolated her before the civil court convened."
         },
         {
           "label": "The 1637 civil trial",
@@ -1412,6 +1840,10 @@
           "text": "After her husband died, she moved beyond Massachusetts authority into New Netherland. Siwanoy warriors killed her and most of her household in 1643 during Kieft's War; daughter Susanna survived."
         },
         {
+          "label": "Split Rock and Susanna",
+          "text": "The attack occurred near today's Pelham Bay and is associated with Split Rock. Nine-year-old Susanna Hutchinson was taken captive and later returned, becoming the only household survivor."
+        },
+        {
           "label": "Wampage and place names",
           "text": "Tradition says Siwanoy leader Wampage took a name associated with her after the attack. The Hutchinson River and parkway preserve her surname near the death site."
         }
@@ -1419,17 +1851,23 @@
       "iacRoute": {
         "6": [
           "Wampage naming tradition",
+          "Split Rock and Susanna",
+          "Newtown synod's condemned errors",
           "Thomas Dudley and John Cotton theology",
           "Mary Dyer's concealed stillbirth"
         ],
         "5": [
           "covenant of grace",
           "Antinomian trial",
-          "Henry Vane and Wheelwright"
+          "Henry Vane and Wheelwright",
+          "1637 election and disarming",
+          "Aquidneck Compact"
         ],
         "4": [
           "Portsmouth",
           "Rhode Island exile",
+          "John Winthrop trial",
+          "Free Grace Controversy",
           "banished from Massachusetts Bay"
         ]
       },
